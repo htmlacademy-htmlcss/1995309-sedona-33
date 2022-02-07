@@ -223,9 +223,48 @@
             <span class="rating-text">Рейтинг: 9,2</span>
           </div>
 
-          <div>
-            <button class="button batton-more-hotels" type="button">Загрузить ещё</button>
+          <div class="pagination-show-more">
+            <button class="button button-show-more" type="button">Загрузить ещё</button>
           </div>
+
+          <div class="pagination">
+
+          <ul class="pagination-list">            
+            <li class="pagination-item">
+              <a class="pagination-link pagination-current">1</a>
+            </li>
+
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">2</a>
+            </li>
+
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">3</a>
+            </li>
+
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">4</a>
+            </li>
+
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">...
+              <span class="visually-hidden">Страницы в середине ленты</span>
+            </a>
+            </li>
+
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">10</a>
+            </li>
+          </ul>
+
+          <label for="hotels-number">Гостиниц на странице:</label>
+          <select class="select-control" id="hotels-number">
+            <option value="popular">4</option>
+            <option value="cheap">8</option>
+            <option value="expensive">12</option>
+          </select>
+
+        </div>
 
         </section>
       </main>

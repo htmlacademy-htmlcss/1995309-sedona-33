@@ -16,5 +16,141 @@
 }
 
 body {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.button {
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #83B3D3;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button-search {
+  background-color: #756257;
+}
+
+.button-search-small {
+  font-size: 16px;
+}
+
+.page-header {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.navigation-link {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+}
+
+.main-index {
+  color: inherit;
+  background-color: #ffffff;
+}
+
+/* Фоновая картинка Welcome */
+.welcome-background {
+  width: 1200px;
+  height: 485px;
+  background-color: #333333;
+  background-image: url("../images/index-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+/* Дивайдер */
+.welcome-picture {
+  width: 1200px;
+  height: 485px;
+  background-image: url("../images/divider.svg");
+  background-size: 100% auto;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.section-title {
+  color: #000000;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.newsletter-section-title {
+  color: #ffffff;
+}
+
+.section-text {
+  font-size: 22px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.advantages-item-text,
+.advices-item {
+  width: 400px;
+  height: 384px;
+}
+
+.item-background-dark {
+  color: #ffffff;
+  background-color: #83B3D3;
+}
+
+.item-background-light12 {
+  color: #333333;
+  background-color: rgba(131,179,211,0.12);
+}
+
+.item-background-light20 {
+  color: #333333;
+  background-color: rgba(131,179,211,0.2);
+}
+
+.item-title {
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages-item-title,
+.advices-item-title {
+  color: black;
+}
+
+.advantages-description {
+  text-align: center;
+}
+
+.newsletter {
+  width: 1200px;
+  height: 411px;
+  color: #ffffff;
+  background-color: #333333;                                                         ;
+  background-image: url("../images/newsletter-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;  
+}
+
+.footer-contacts-phone {
+  color: #000000;
+  font-size: 40px;
+  line-height: 40px;
+  text-decoration: none;
+  text-align: center;
 }

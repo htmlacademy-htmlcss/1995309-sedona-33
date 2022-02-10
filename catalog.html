@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -153,13 +154,13 @@
 
           <!-- Отображение гостиниц каталога -->
 
-          <button class="card-view card-view-active" type="button">
+          <button class="button-view card-view" type="button">
             <span class="visually-hidden">Показать карточки</span>
           </button>
-          <button class="slideshow-view" type="button">
+          <button class="button-view slideshow-view" type="button">
             <span class="visually-hidden">Показать слайдшоу</span>
           </button>
-          <button class="list-view" type="button">
+          <button class="button-view list-view" type="button">
             <span class="visually-hidden">Показать список</span>
           </button>
 
@@ -173,7 +174,7 @@
             <p class="hotel-card-text">Гостиница</p>
             <p class="hotel-card-text">От 4000 ₽</p>
             <a class="button button-detail" href="#">Подробнее</a>
-            <button class="button batton-favourites" type="button">В избранное</button>
+            <button class="button button-favourites" type="button">В избранное</button>
             <img class="star-category" src="images/catalog/rating/stars-4.svg" width="91" height="17" alt="4 звезды">
             <span class="rating-text">Рейтинг: 8,5</span>
           </div>
@@ -188,7 +189,7 @@
             <p class="hotel-card-text">Гостиница</p>
             <p class="hotel-card-text">От 3000 ₽</p>
             <a class="button button-detail" href="#">Подробнее</a>
-            <button class="button batton-favourites" type="button">В избранное</button>
+            <button class="button button-favourites" type="button">В избранное</button>
             <img class="star-category" src="images/catalog/rating/stars-3.svg" width="68" height="17" alt="3 звезды">
             <span class="rating-text">Рейтинг: 8,9</span>
           </div>
@@ -203,7 +204,7 @@
             <p class="hotel-card-text">Гостиница</p>
             <p class="hotel-card-text">От 2000 ₽</p>
             <a class="button button-detail" href="#">Подробнее</a>
-            <button class="button batton-favourites-done" type="button">В избранном</button>
+            <button class="button button-favourites button-favourites-done" type="button">В избранном</button>
             <img class="star-category" src="images/catalog/rating/stars-2.svg" width="43" height="17" alt="2 звезды">
             <span class="rating-text">Рейтинг: 9,2</span>
           </div>
@@ -218,7 +219,7 @@
             <p class="hotel-card-text">Гостиница</p>
             <p class="hotel-card-text">От 3000 ₽</p>
             <a class="button button-detail" href="#">Подробнее</a>
-            <button class="button batton-favourites" type="button">В избранное</button>
+            <button class="button button-favourites" type="button">В избранное</button>
             <img class="star-category" src="images/catalog/rating/stars-2.svg" width="43" height="17" alt="2 звезды">
             <span class="rating-text">Рейтинг: 9,2</span>
           </div>
@@ -231,29 +232,29 @@
 
           <ul class="pagination-list">            
             <li class="pagination-item">
-              <a class="pagination-link pagination-current">1</a>
+              <a class="button pagination-link pagination-current">1</a>
             </li>
 
             <li class="pagination-item">
-              <a class="pagination-link" href="#">2</a>
+              <a class="button pagination-link" href="#">2</a>
             </li>
 
             <li class="pagination-item">
-              <a class="pagination-link" href="#">3</a>
+              <a class="button pagination-link" href="#">3</a>
             </li>
 
             <li class="pagination-item">
-              <a class="pagination-link" href="#">4</a>
+              <a class="button pagination-link" href="#">4</a>
             </li>
 
             <li class="pagination-item">
-              <a class="pagination-link" href="#">...
+              <a class="button pagination-link" href="#">...
               <span class="visually-hidden">Страницы в середине ленты</span>
             </a>
             </li>
 
             <li class="pagination-item">
-              <a class="pagination-link" href="#">10</a>
+              <a class="button pagination-link" href="#">10</a>
             </li>
           </ul>
 
@@ -272,8 +273,8 @@
       <!-- Блок подписки -->
 
       <section class="page-footer-newsletter">
-        <h2 class="page-footer-title">Подпишитесь на рассылку</h2>
-        <p class="newsletter-text">Только полезная информация и никакого спама,
+        <h2 class="section-title">Подпишитесь на рассылку</h2>
+        <p class="newsletter-description section-text">Только полезная информация и никакого спама,
           честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
           <input class="field"  placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>

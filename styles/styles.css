@@ -31,16 +31,38 @@ body {
   text-align: center;
   color: #ffffff;
   background-color: #83B3D3;
+  border-style: none;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-.button-search {
+.button-search,
+.button-detail {
   background-color: #756257;
 }
 
-.button-search-small {
+.button-search-small,
+.button-detail,
+.button-favourites {
   font-size: 16px;
+}
+
+.button-favourites-done {
+  background-color: #7DB54F;
+}
+
+.button-reset {
+  color: #ffffff;
+  background-color: transparent;
+  border-style: none;
+  font-size: 18px;
+  text-align: center;
+}
+
+.main-index,
+.main-inner {
+  color: inherit;
+  background-color: #ffffff;
 }
 
 .page-header {
@@ -55,11 +77,6 @@ body {
   color: inherit;
   text-align: center;
   text-decoration: none;
-}
-
-.main-index {
-  color: inherit;
-  background-color: #ffffff;
 }
 
 /* Фоновая картинка Welcome */
@@ -80,6 +97,41 @@ body {
   background-size: 100% auto;
   background-position: center bottom;
   background-repeat: no-repeat;
+}
+
+.inner-header {
+  color: #ffffff;
+  background-color: #333333;
+  background-image: url("../images/catalog-background.jpg");
+  background-repeat: no-repeat;
+  font-size: 18px;
+  line-height: 31px;
+}
+
+.inner-header-title {
+  font-size: 60px;
+}
+
+.breadcrumb-link {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.hotel-card-title {
+  color: #000000;
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 700;
+  }
+
+.hotel-card-link {
+  text-decoration: none;
 }
 
 .section-title {
@@ -130,11 +182,44 @@ body {
 
 .advantages-item-title,
 .advices-item-title {
-  color: black;
+  color: #000000;
 }
 
 .advantages-description {
   text-align: center;
+}
+
+.button-view {
+  background-color: #ffffff;
+  border-color: #e5e5e5;
+}
+
+.card-view {
+  border-color: #000000;
+}
+
+.hotels-found {
+  color: #000000;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hotel-card-text {
+  line-height: 23px;
+}
+
+.rating-text {
+  color: inherit;
+  background-color: #f2f2f2;
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.pagination-current {
+  color: #000000;
+  background-color: #f2f2f2;
 }
 
 .newsletter {
@@ -147,6 +232,10 @@ body {
   background-repeat: no-repeat;  
 }
 
+.social-link {
+  background-color: #ffffff;
+}
+
 .footer-contacts-phone {
   color: #000000;
   font-size: 40px;
@@ -154,3 +243,5 @@ body {
   text-decoration: none;
   text-align: center;
 }
+
+

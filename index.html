@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -48,7 +51,7 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="button button-search" href="#">Хочу сюда</a>
+            <a class="button button-search button-search-small" href="#">Хочу сюда</a>
           </li>
         </ul>
       </nav>
@@ -57,16 +60,18 @@
     <main class="main-index">
       <h1 class="visually-hidden">Седона</h1>
 
-      <div class="welcome-picture">
-        <img src="images/welcome.svg" width="458" height="352" alt="welcome to the gorgeous Sedona because the Grand Canyon sucks!">
+      <div class="welcome-background">
+        <div class="welcome-picture">
+          <img src="images/welcome.svg" width="458" height="352" alt="welcome to the gorgeous Sedona because the Grand Canyon sucks!">
+        </div>
       </div>
 
       <section class="advantages">
 
 
-        <h2 class="advantages-section-title">Седона — небольшой городок в Аризоне,
+        <h2 class="section-title advantages-section-title">Седона — небольшой городок в Аризоне,
           заслуживающий большего!</h2>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+        <p class="advantages-intro section-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
 
           <!-- Блок с причинами (плитки) -->
 
@@ -75,8 +80,8 @@
           <!-- Пункт 1 -->
 
           <li class="advantages-item"> 
-            <div class="advantages-text"> 
-              <h3 class="advantages-title">Настоящий городок</h3>
+            <div class="advantages-item-text item-background-dark"> 
+              <h3 class="item-title">Настоящий городок</h3>
               <span class="advantages-number">— №1 —</span>
               <p class="advantages-description">Седона — не аттракцион для туристов,
                 там течёт своя жизнь</p>
@@ -86,22 +91,22 @@
             <!-- Подсписок -->
 
             <ul class="advices-list">
-              <li class="advices-item advices-item-house">
-                <h4 class="advices-title">Жильё</h4>
-                <p class="advices-description">Рекомендуем пожить в настоящем мотеле,
-                  всё как в кино!</p>
+              <li class="advices-item advices-item-house item-background-light12">
+                <h4 class="item-title advices-item-title">Жильё</h4>
+                  <p class="advices-description">Рекомендуем пожить в настоящем мотеле,
+                    всё как в кино!</p>
               </li>
               
               <li class="advices-item advices-item-burger">
-                <h4 class="advices-title">Еда</h4>
-                <p class="advices-description">Всегда заказывайте топовый фирменный бургер,
-                  вы не разочаруетесь</p>
+                <h4 class="item-title advices-item-title">Еда</h4>
+                  <p class="advices-description">Всегда заказывайте топовый фирменный бургер,
+                    вы не разочаруетесь</p>
               </li>
 
-              <li class="advices-item advices-item-gift">
-                <h4 class="advices-title">Сувениры</h4>
-                <p class="advices-description">Не только китайского, но и настоящего
-                  местного производства!</p>
+              <li class="advices-item advices-item-gift item-background-light12">
+                <h4 class="item-title advices-item-title">Сувениры</h4>
+                  <p class="advices-description">Не только китайского, но и настоящего
+                    местного производства!</p>
               </li>
             </ul>
           </li>
@@ -110,8 +115,8 @@
 
           <li class="advantages-item">
             <img class="advantages-picture" src="images/photo-item-2.jpg" width="800" height="384" alt="мост дьявола"> 
-            <div class="advantages-text"> 
-              <h3 class="advantages-title">Там есть мост дьявола</h3>
+            <div class="advantages-item-text item-background-dark"> 
+              <h3 class="item-title">Там есть мост дьявола</h3>
               <span class="advantages-number">— №2 —</span>
               <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь,
                 разумеется</p>
@@ -121,26 +126,32 @@
           <!-- Пункт 3 -->
 
           <li class="advantages-item">
-            <h3>Небольшая площадь</h3>
-            <span class="advantages-number">— №3 — </span>
-            <p class="advantages-description">Все достопримечательности находятся
-              очень близко</p>
+            <div class="advantages-item-text item-background-light12">
+              <h3 class="item-title advantages-item-title">Небольшая площадь</h3>
+              <span class="advantages-number">— №3 — </span>
+              <p class="advantages-description">Все достопримечательности находятся
+                очень близко</p>
+            </div>
           </li>
 
           <!-- Пункт 4 -->
 
           <li class="advantages-item"> 
-            <h3 class="advantages-title">Красивая дорога</h3>
-            <span class="advantages-number">— №4 —</span>
-            <p class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <div class="advantages-item-text item-background-light20">
+              <h3 class="item-title advantages-item-title">Красивая дорога</h3>
+              <span class="advantages-number">— №4 —</span>
+              <p class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </div>
           </li>
 
           <!-- Пункт 5 -->
 
-          <li class="advantages-item"> 
-            <h3 class="advantages-title">Мало туристов</h3>
-            <span class="advantages-number">— №5 —</span>
-            <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
+          <li class="advantages-item">
+            <div class="advantages-item-text item-background-light12">
+              <h3 class="item-title advantages-item-title">Мало туристов</h3>
+              <span class="advantages-number">— №5 —</span>
+              <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
+          </div> 
           </li>
         </ol>
 
@@ -149,10 +160,10 @@
       <!-- Заинтересовались? -->
 
       <section class="interested">
-        <h2>
+        <h2 class="section-title interested-section-title">
           Заинтересовались?
         </h2>
-        <p>
+        <p class="interested-description section-text">
           Укажите предполагаемые даты поездки, и мы покажем вам лучшие
           предложения гостиниц в Седоне
         </p>
@@ -162,9 +173,9 @@
 
     <!-- Секция с подпиской -->
 
-    <section class="page-footer-newsletter">
-      <h2 class="page-footer-title">Подпишитесь на рассылку</h2>
-      <p class="newsletter-text">Только полезная информация и никакого спама,
+    <section class="newsletter">
+      <h2 class="section-title newsletter-section-title">Подпишитесь на рассылку</h2>
+      <p class="newsletter-description section-text">Только полезная информация и никакого спама,
         честное бойскаутское!</p>
       <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
         <input class="field"  placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>

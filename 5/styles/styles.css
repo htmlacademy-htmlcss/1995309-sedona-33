@@ -1,0 +1,247 @@
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.button {
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #83B3D3;
+  border-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button-search,
+.button-detail {
+  background-color: #756257;
+}
+
+.button-search-small,
+.button-detail,
+.button-favourites {
+  font-size: 16px;
+}
+
+.button-favourites-done {
+  background-color: #7DB54F;
+}
+
+.button-reset {
+  color: #ffffff;
+  background-color: transparent;
+  border-style: none;
+  font-size: 18px;
+  text-align: center;
+}
+
+.main-index,
+.main-inner {
+  color: inherit;
+  background-color: #ffffff;
+}
+
+.page-header {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.navigation-link {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Фоновая картинка Welcome */
+.welcome-background {
+  width: 1200px;
+  height: 485px;
+  background-color: #333333;
+  background-image: url("../images/index-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+/* Дивайдер */
+.welcome-picture {
+  width: 1200px;
+  height: 485px;
+  background-image: url("../images/divider.svg");
+  background-size: 100% auto;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.inner-header {
+  color: #ffffff;
+  background-color: #333333;
+  background-image: url("../images/catalog-background.jpg");
+  background-repeat: no-repeat;
+  font-size: 18px;
+  line-height: 31px;
+}
+
+.inner-header-title {
+  font-size: 60px;
+}
+
+.breadcrumb-link {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.hotel-card-title {
+  color: #000000;
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 700;
+  }
+
+.hotel-card-link {
+  text-decoration: none;
+}
+
+.section-title {
+  color: #000000;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.newsletter-section-title {
+  color: #ffffff;
+}
+
+.section-text {
+  font-size: 22px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.advantages-item-text,
+.advices-item {
+  width: 400px;
+  height: 384px;
+}
+
+.item-background-dark {
+  color: #ffffff;
+  background-color: #83B3D3;
+}
+
+.item-background-light12 {
+  color: #333333;
+  background-color: rgba(131,179,211,0.12);
+}
+
+.item-background-light20 {
+  color: #333333;
+  background-color: rgba(131,179,211,0.2);
+}
+
+.item-title {
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages-item-title,
+.advices-item-title {
+  color: #000000;
+}
+
+.advantages-description {
+  text-align: center;
+}
+
+.button-view {
+  background-color: #ffffff;
+  border-color: #e5e5e5;
+}
+
+.card-view {
+  border-color: #000000;
+}
+
+.hotels-found {
+  color: #000000;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hotel-card-text {
+  line-height: 23px;
+}
+
+.rating-text {
+  color: inherit;
+  background-color: #f2f2f2;
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.pagination-current {
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
+.newsletter {
+  width: 1200px;
+  height: 411px;
+  color: #ffffff;
+  background-color: #333333;                                                         ;
+  background-image: url("../images/newsletter-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;  
+}
+
+.social-link {
+  background-color: #ffffff;
+}
+
+.footer-contacts-phone {
+  color: #000000;
+  font-size: 40px;
+  line-height: 40px;
+  text-decoration: none;
+  text-align: center;
+}
+
+

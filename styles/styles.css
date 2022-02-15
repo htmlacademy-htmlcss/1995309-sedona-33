@@ -357,7 +357,7 @@ body {
 
 .page-footer-container {
   display: flex;
-  width: 1200px;
+  width: 1056px;
   margin: 0 auto;
 }
 
@@ -366,8 +366,7 @@ body {
 .footer-social-list {
   width: 107px;
   margin: 0;
-  margin-left: 72px;
-  margin-right: 61px;
+  margin-right: auto;
   padding: 0;
 }
 .social-link {
@@ -387,5 +386,5 @@ body {
 
 .academy-link {
   width: 115px;
-  margin-right: 72px;
+  margin-left: auto;
 }

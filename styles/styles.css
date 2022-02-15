@@ -23,6 +23,7 @@ body {
   background-color: #ffffff;
 }
 
+/* Кнопки (общее) */
 .button {
   font-family: inherit;
   font-size: 20px;
@@ -36,21 +37,26 @@ body {
   text-transform: uppercase;
 }
 
+/* Кнопки коричневые */
 .button-search,
 .button-detail {
   background-color: #756257;
 }
 
+/* Маленькие кнопки */
+/* "Хочу сюда", сортировка гостиниц, каталог */
 .button-search-small,
 .button-detail,
 .button-favourites {
   font-size: 16px;
 }
 
+/* Зелёная кнопка в каталоге */
 .button-favourites-done {
   background-color: #7DB54F;
 }
 
+/* Кнопка сброса в сортировке */
 .button-reset {
   color: #ffffff;
   background-color: transparent;
@@ -59,17 +65,20 @@ body {
   text-align: center;
 }
 
+/* Мэйн обеих страниц */
 .main-index,
 .main-inner {
   color: inherit;
   background-color: #ffffff;
 }
 
+/* Главный хедер */
 .page-header {
   color: #000000;
   background-color: #ffffff;
 }
 
+/* Ссылка пункта меню */
 .navigation-link {
   font-size: 20px;
   line-height: 26px;
@@ -99,6 +108,7 @@ body {
   background-repeat: no-repeat;
 }
 
+/* Хедер каталога */
 .inner-header {
   color: #ffffff;
   background-color: #333333;
@@ -108,21 +118,25 @@ body {
   line-height: 31px;
 }
 
+/* Н1 страницы каталога */
 .inner-header-title {
   font-size: 60px;
 }
 
+/* Хлебные крошки */
 .breadcrumb-link {
   color: #ffffff;
   font-size: 16px;
 }
 
+/* Название подраздела каталога */
 .catalog-filter-title {
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
 }
 
+/* Назавание гостиницы в карточке */
 .hotel-card-title {
   color: #000000;
   font-size: 24px;
@@ -130,10 +144,12 @@ body {
   font-weight: 700;
   }
 
+ /* Ссылка на подробное описание */ 
 .hotel-card-link {
   text-decoration: none;
 }
 
+/* Заголовки секций (Н2) */
 .section-title {
   color: #000000;
   font-size: 30px;
@@ -142,37 +158,45 @@ body {
   text-transform: uppercase;
 }
 
+/* Заголовок рассылки (главная страница)*/
 .newsletter-section-title {
   color: #ffffff;
 }
 
+/* Текст на страницах */
+/* НЕ преимущества. НЕ карточки */
 .section-text {
   font-size: 22px;
   line-height: 36px;
   text-align: center;
 }
 
+/* Преимущества контейнер с текстом */
 .advantages-item-text,
 .advices-item {
   width: 400px;
   height: 384px;
 }
 
+/* Преимущества тёмный фон */
 .item-background-dark {
   color: #ffffff;
   background-color: #83B3D3;
 }
 
+/* Преимущества самый светлый фон */
 .item-background-light12 {
   color: #333333;
   background-color: rgba(131,179,211,0.12);
 }
 
+/* Преимущества светлый фон */
 .item-background-light20 {
   color: #333333;
   background-color: rgba(131,179,211,0.2);
 }
 
+/* Преимущества заголовок */
 .item-title {
   font-size: 24px;
   line-height: 28px;
@@ -180,24 +204,29 @@ body {
   text-transform: uppercase;
 }
 
+/* Преимущества чёрный заголовок */
 .advantages-item-title,
 .advices-item-title {
   color: #000000;
 }
 
+/* Преимущества описание (текст) */
 .advantages-description {
   text-align: center;
 }
 
+/* Кнопки отображения */
 .button-view {
   background-color: #ffffff;
   border-color: #e5e5e5;
 }
 
+/* Кнопка отображения (активна) */
 .card-view {
   border-color: #000000;
 }
 
+/* Найдено гостиниц: 38 */
 .hotels-found {
   color: #000000;
   font-size: 30px;
@@ -205,10 +234,12 @@ body {
   text-transform: uppercase;
 }
 
+/* Текст карточек каталога */
 .hotel-card-text {
   line-height: 23px;
 }
 
+/* Рейтинг гостиницы */
 .rating-text {
   color: inherit;
   background-color: #f2f2f2;
@@ -217,11 +248,14 @@ body {
   text-transform: uppercase;
 }
 
+/* Активная кнопка пагинации */
 .pagination-current {
   color: #000000;
   background-color: #f2f2f2;
 }
 
+/* Секция подписки */
+/* Главная страница */
 .newsletter {
   width: 1200px;
   height: 411px;
@@ -232,10 +266,12 @@ body {
   background-repeat: no-repeat;  
 }
 
+/* Социальные сети (футер) */
 .social-link {
   background-color: #ffffff;
 }
 
+/* Контактный телефон (футер) */
 .footer-contacts-phone {
   color: #000000;
   font-size: 40px;
@@ -243,5 +279,3 @@ body {
   text-decoration: none;
   text-align: center;
 }
-
-

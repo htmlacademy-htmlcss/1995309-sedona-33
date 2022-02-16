@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <base href="https://htmlacademy-htmlcss.github.io/1995309-sedona-33/6/">
+</head>
+
+  <body>
+
+    <header class="page-header">
+
+      <!-- Навигация -->
+
+      <nav class="navigation">
+
+        <a class="logo-navigation" href="index.html">
+          <img class="page-header-logo" src="images/header/logo-sedona.svg" width="139" height="70" alt="Логотип города Седона">
+        </a>
+
+        <!-- Левое меню -->
+
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a class="navigation-link" href="index.html">Главная</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">О Седоне</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="catalog.html">Гостиницы</a>
+          </li>
+        </ul>
+
+        <!-- Правое меню -->
+
+        <ul class="navigation-list navigation-purchase">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">
+              <span class="visually-hidden">
+                Поиск
+              </span>
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">
+              <span class="visually-hidden">
+                Избранное
+              </span>
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a class="button button-search button-search-small" href="#">Хочу сюда</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+      <main class="main-container main-inner">
+        <div class="page-container">
+        <header class="inner-header">
+          <div class="inner-header-content">
+          <h1 class="inner-header-title">Гостиницы Седоны</h1>
+
+          <!-- Хлебные крошки -->
+
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
+              <a class="breadcrumb-link" href="index.html">
+                <span class="visually-hidden">
+                  Главная
+                </span>
+              </a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="breadcrumb-link">Гостиницы</a>
+            </li>
+          </ul>
+          <!-- Формы (фильтры поиска) -->
+
+          <div class="catalog-filter-container">
+
+          <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+            <h2 class="visually-hidden" hidden>Фильтры поиска</h2> <!-- Атрибут hidden не забыть убрать!!!! -->
+
+            <!-- Чекбоксы "Инфраструктура" -->
+
+            <fieldset class="catalog-filter-group catalog-filter-group-infrastructure">
+              <legend class="catalog-filter-title">Инфраструктура:</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="swimming-pool" checked>
+                      Бассейн
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                   <label class="control">
+                    <input class="control-input" type="checkbox" name="paking-lot" checked>
+                      Парковка
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="checkbox" name="wi-fi">
+                      Wi-Fi
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <!-- Радиокнопки "Тип жилья" -->
+
+            <fieldset class="catalog-filter-group catalog-filter-group-type">
+              <legend class="catalog-filter-title">Тип жилья</legend>
+              <ul class="catalog-filter-list">
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="radio" name="house-type" value="hotel" checked>
+                      Гостиница
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="radio" name="house-type" value="motel">
+                      Мотель
+                  </label>
+                </li>
+                <li class="catalog-filter-item">
+                  <label class="control">
+                    <input class="control-input" type="radio" name="house-type" value="apartment">
+                      Апартаменты
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <div class="catalog-filter-buttons">
+            <button class="button" type="submit">Применить</button>
+            <button class="button-reset" type="reset">Сбросить</button>
+            </div>
+
+          </form>
+          </div>
+          </div>
+        </header>
+
+        <section class="catalog-hotels">
+          <h2 class="visually-hidden">Каталог гостиниц</h2>
+
+          <!-- Вывод результатов поиска -->
+
+          <div class="hotels-found-container">
+
+          <p class="hotels-found">Найдено гостиниц: 38</p>
+
+          <!-- Сортировка (селект) -->
+
+          <select class="select-control" aria-label="Сортировка">
+            <option value="popular">Сначала дешёвые</option>
+            <option value="cheap">Сначала дорогие</option>
+            <option value="expensive">Сначала популярные</option>
+          </select>
+
+          <!-- Отображение гостиниц каталога -->
+
+          <button class="button-view card-view" type="button">
+            <span class="visually-hidden">Показать карточки</span>
+          </button>
+          <button class="button-view slideshow-view" type="button">
+            <span class="visually-hidden">Показать слайдшоу</span>
+          </button>
+          <button class="button-view list-view" type="button">
+            <span class="visually-hidden">Показать список</span>
+          </button>
+
+          </div>
+
+          <!-- Гостиница 1 -->
+
+          <div class="hotel-card">
+            <a class="hotel-card-link" href="#">
+              <img class="hotel-card-image" src="images/catalog/hotel-1.jpg" width="300" height="206" alt="Amara Resort & Spa">
+              <h3 class="hotel-card-title">Amara Resort & Spa</h3>
+            </a>
+            <p class="hotel-card-text">Гостиница</p>
+            <p class="hotel-card-text">От 4000 ₽</p>
+            <a class="button button-detail" href="#">Подробнее</a>
+            <button class="button button-favourites" type="button">В избранное</button>
+            <img class="star-category" src="images/catalog/rating/stars-4.svg" width="91" height="17" alt="4 звезды">
+            <span class="rating-text">Рейтинг: 8,5</span>
+          </div>
+
+          <!-- Гостиница 2 -->
+          
+          <div class="hotel-card">
+            <a class="hotel-card-link" href="#">
+              <img class="hotel-card-image" src="images/catalog/hotel-2.jpg" width="300" height="206" alt="Desert Quail Inn">
+              <h3 class="hotel-card-title">Desert Quail Inn</h3>
+            </a>
+            <p class="hotel-card-text">Гостиница</p>
+            <p class="hotel-card-text">От 3000 ₽</p>
+            <a class="button button-detail" href="#">Подробнее</a>
+            <button class="button button-favourites" type="button">В избранное</button>
+            <img class="star-category" src="images/catalog/rating/stars-3.svg" width="68" height="17" alt="3 звезды">
+            <span class="rating-text">Рейтинг: 8,9</span>
+          </div>
+
+          <!-- Гостиница 3 -->
+
+          <div class="hotel-card">
+            <a class="hotel-card-link" href="#">
+              <img class="hotel-card-image" src="images/catalog/hotel-3.jpg" width="300" height="206" alt="Villas at Poco Diablo">
+              <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
+            </a>
+            <p class="hotel-card-text">Гостиница</p>
+            <p class="hotel-card-text">От 2000 ₽</p>
+            <a class="button button-detail" href="#">Подробнее</a>
+            <button class="button button-favourites button-favourites-done" type="button">В избранном</button>
+            <img class="star-category" src="images/catalog/rating/stars-2.svg" width="43" height="17" alt="2 звезды">
+            <span class="rating-text">Рейтинг: 9,2</span>
+          </div>
+
+          <!-- Гостиница 4 -->
+
+          <div class="hotel-card">
+            <a class="hotel-card-link" href="#">
+              <img class="hotel-card-image" src="images/catalog/hotel-4.jpg" width="300" height="206" alt="GreenTree Inn">
+              <h3 class="hotel-card-title">GreenTree Inn</h3>
+            </a>
+            <p class="hotel-card-text">Гостиница</p>
+            <p class="hotel-card-text">От 3000 ₽</p>
+            <a class="button button-detail" href="#">Подробнее</a>
+            <button class="button button-favourites" type="button">В избранное</button>
+            <img class="star-category" src="images/catalog/rating/stars-2.svg" width="43" height="17" alt="2 звезды">
+            <span class="rating-text">Рейтинг: 9,2</span>
+          </div>
+
+
+          <!-- Пагинация -->
+          <div class="pagination-show-more">
+            <button class="button button-show-more" type="button">Загрузить ещё</button>
+          </div>
+
+          <div class="pagination">
+
+          <ul class="pagination-list">            
+            <li class="pagination-item">
+              <a class="button pagination-link pagination-current">1</a>
+            </li>
+
+            <li class="pagination-item">
+              <a class="button pagination-link" href="#">2</a>
+            </li>
+
+            <li class="pagination-item">
+              <a class="button pagination-link" href="#">3</a>
+            </li>
+
+            <li class="pagination-item">
+              <a class="button pagination-link" href="#">4</a>
+            </li>
+
+            <li class="pagination-item">
+              <a class="button pagination-link" href="#">...
+              <span class="visually-hidden">Страницы в середине ленты</span>
+            </a>
+            </li>
+
+            <li class="pagination-item">
+              <a class="button pagination-link" href="#">10</a>
+            </li>
+          </ul>
+
+          <label for="hotels-number">Гостиниц на странице:</label>
+          <select class="select-control" id="hotels-number">
+            <option value="popular">4</option>
+            <option value="cheap">8</option>
+            <option value="expensive">12</option>
+          </select>
+
+        </div>
+
+        </section>
+        </div>
+      </main>
+
+      <!-- Секция с подпиской -->
+
+      <section class="newsletter page-footer-newsletter">
+        <h2 class="section-title">Подпишитесь на рассылку</h2>
+        <p class="newsletter-description section-text">Только полезная информация и никакого спама,
+          честное бойскаутское!</p>
+        <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+          <input class="field"  placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
+          <button class="button newsletter-button" type="submit">Подписаться</button>
+        </form>
+      </section>
+
+      <!-- Футер -->  
+
+    <footer class="page-footer">
+
+      <h2 class="visually-hidden">Наши контакты</h2>
+      
+      <div class="page-footer-container">
+        
+        <!-- Соцсети -->
+
+        <ul class="footer-social-list">
+          <li class="footer-social-item">
+            <a class="social-link" href="https://twitter.com/htmlacademy_ru">
+              <span class="visually-hidden">Твиттер</span>
+            </a>
+          </li>
+        
+          <li class="footer-social-item">
+            <a class="social-link" href="https://www.facebook.com/htmlacademy">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
+          </li>
+
+          <li class="footer-social-item">
+            <a class="social-link" href="https://www.youtube.com/c/HTMLAcademyRUS">
+              <span class="visually-hidden">Ютуб</span>
+            </a>
+          </li>
+
+        </ul>
+
+        <!-- Телефон -->
+
+        <a class="footer-contacts-phone" href="tel:+78128121212">+7 812 812-12-12</a>
+
+        <!-- Логотип -->
+
+        <a class="academy-link" href="https://htmlacademy.ru/">
+          <img class="academy-logo>" src="images/footer/logo-academy.svg" width="115" height="34" alt="логотип html-академии">
+        </a>
+
+      </div>  
+
+    </footer>
+  </body>
+</html>

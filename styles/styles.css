@@ -244,6 +244,12 @@ body {
   line-height: 31px;
 }
 
+/* Контейнер контента каталога */
+.inner-header-content {
+  width: 1060px;
+  margin: 0 auto;
+}
+
 /* Н1 страницы каталога */
 .inner-header-title {
   font-size: 60px;
@@ -255,11 +261,59 @@ body {
   font-size: 16px;
 }
 
+/* Общая форма фильтра */
+.catalog-filter {
+  display: flex;
+}
+
+/* Группа списка фильтра */
+.catalog-filter-group {
+  margin: 0;
+  padding: 0;
+  width: 150px;
+}
+
+/* Фильтр инфраструктуры */
+.catalog-filter-group-infrastructure {
+  margin-right: 67px;
+}
+
+/* Фильтр типа жилья */
+.catalog-filter-group-type {
+  margin-right: auto;
+}
+
 /* Название подраздела каталога */
 .catalog-filter-title {
+  margin: 0;
+  padding: 0;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
+}
+
+/* Список фильтра */
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+}
+
+/* Применить и Сбросить */
+.catalog-filter-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Секция с карточками каталога */
+.catalog-hotels {
+  width: 1060px;
+  margin: 0 auto;
+}
+
+/* Подпись над каталогом + кнопки отображения */
+.hotels-found-container {
+  display: flex;
+  align-items: center;
 }
 
 /* Назавание гостиницы в карточке */
@@ -347,6 +401,7 @@ body {
   height: 411px;
 }
 
+/* Секция с подпиской на главной */
 .newsletter-section {
   color: #ffffff;
   background-color: #333333;
@@ -355,6 +410,7 @@ body {
   background-repeat: no-repeat;  
 }
 
+/* Контейнер футера */
 .page-footer-container {
   display: flex;
   width: 1056px;

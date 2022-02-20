@@ -31,6 +31,17 @@ body {
   background-color: #ffffff;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: -1;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Кнопки (общее) */
 .button {
   font-family: inherit;
@@ -59,6 +70,12 @@ body {
   font-size: 16px;
 }
 
+.button-search-small {
+  display: block;
+  padding: 9px 35px 8px;
+  margin-top: 14px;
+}
+
 /* Зелёная кнопка в каталоге */
 .button-favourites-done {
   background-color: #7DB54F;
@@ -78,20 +95,46 @@ body {
   display: flex;
   width: 1060px;
   margin: 0 auto;
-}
-
-/* Правое меню */
-.navigation-list {
-  width: 440px;
-  margin: 0;
-  margin-left: 30px;
   padding: 0;
 }
 
+.logo-navigation {
+  line-height: 0%;
+}
+
 /* Левое меню */
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  margin: 0;
+  margin-left: 30px;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Правое меню */
 .navigation-purchase {
+  display: flex;
+  justify-content: flex-end;
   max-width: 300px;
   margin-left: auto;
+}
+
+/* Ссылка пункта меню */
+.navigation-link {
+  display: block;
+  padding: 20px 17px;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navigation-link-purchase {
+  margin-top: 14px;
 }
 
 /* Мэйн обеих страниц */
@@ -111,16 +154,6 @@ body {
 .page-header {
   color: #000000;
   background-color: #ffffff;
-}
-
-/* Ссылка пункта меню */
-.navigation-link {
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 700;
-  color: inherit;
-  text-align: center;
-  text-decoration: none;
 }
 
 /* Основной контент */

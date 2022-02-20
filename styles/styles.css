@@ -72,7 +72,7 @@ body {
 
 .button-search-small {
   display: block;
-  padding: 9px 35px 8px;
+  padding: 6px 35px 5px;
   margin-top: 14px;
 }
 
@@ -99,6 +99,7 @@ body {
 }
 
 .logo-navigation {
+  position: absolute;
   line-height: 0%;
 }
 
@@ -108,7 +109,7 @@ body {
   flex-wrap: wrap;
   width: 500px;
   margin: 0;
-  margin-left: 30px;
+  margin-left: 186px;
   padding: 0;
   list-style-type: none;
 }
@@ -148,7 +149,7 @@ body {
 .page-container {
   width: 1200px;
   margin: 0 auto;
-}
+  }
 
 /* Главный хедер */
 .page-header {
@@ -174,6 +175,7 @@ body {
 .welcome-background {
   width: 1200px;
   height: 485px;
+  margin-top: -4px;
   background-color: #333333;
   background-image: url("../images/index-background.jpg");
   background-size: 100% auto;

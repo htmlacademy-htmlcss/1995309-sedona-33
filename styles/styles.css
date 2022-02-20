@@ -112,7 +112,6 @@ body {
   margin-left: 186px;
   padding: 0;
   list-style-type: none;
-  border: 1px solid #000000;
 }
 
 /* Правое меню */
@@ -133,7 +132,6 @@ body {
   color: inherit;
   text-align: center;
   text-decoration: none;
-  border: 1px solid #000000;
 }
 
 /* Ссылка пункта правого меню (иконки) */
@@ -170,6 +168,8 @@ body {
 /* Текст на страницах */
 /* НЕ преимущества. НЕ карточки */
 .section-text {
+  margin: 0;
+  padding: 0;
   font-size: 22px;
   line-height: 36px;
   text-align: center;
@@ -179,7 +179,7 @@ body {
 .welcome-background {
   width: 1200px;
   height: 485px;
-  margin-top: -4px;
+  margin-bottom: 63px;
   background-color: #333333;
   background-image: url("../images/index-background.jpg");
   background-size: 100% auto;
@@ -189,7 +189,8 @@ body {
 /* Дивайдер */
 .welcome-divider {
   width: 1200px;
-  height: 485px;
+  height: 434px;
+  padding-top: 52px;
   background-image: url("../images/divider.svg");
   background-size: 100% auto;
   background-position: center bottom;
@@ -200,6 +201,24 @@ body {
 .welcome-picture {
   display: block;
   margin: 0 auto;
+}
+
+/* Заголовки секций (Н2) */
+.section-title {
+  color: #000000;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages-section-title {
+  margin: 0;
+  margin-bottom: 31px;
+}
+
+.advantages-intro {
+  margin-bottom: 80px;
 }
 
 /* Список преимуществ */
@@ -227,13 +246,18 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 /* Преимущества контейнер с текстом */
 .advantages-item-text,
 .advices-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 400px;
   height: 384px;
+  box-sizing: border-box;
 }
 
 /* Преимущества тёмный фон */
@@ -254,12 +278,24 @@ body {
   background-color: rgba(131,179,211,0.2);
 }
 
-/* Преимущества заголовок */
+.advices-item {
+
+}
+
+/* Преимущества и Советы заголовок */
 .item-title {
   font-size: 24px;
   line-height: 28px;
+  margin: 0;
+  padding: 0;
   text-align: center;
   text-transform: uppercase;
+}
+
+/* Преимущества заголовок */
+.advantages-item-text .item-title {
+  margin-top: 97px;
+  margin-bottom: 30px;
 }
 
 /* Преимущества чёрный заголовок */
@@ -268,9 +304,27 @@ body {
   color: #000000;
 }
 
+/* Советы заголовок */
+.advices-item-title {
+  margin-bottom: 20px;
+}
+
+/* Преимущества номер */
+.advantages-number {
+  margin-bottom: 30px;
+}
+
 /* Преимущества описание (текст) */
-.advantages-description {
+.advantages-description,
+.advices-description {
+  margin: 0;
+  padding: 0;
+  width: 250px;
   text-align: center;
+}
+
+.item-background-dark .advantages-description {
+  width: 220px;
 }
 
 /* Хедер каталога */
@@ -368,15 +422,6 @@ body {
   text-decoration: none;
 }
 
-/* Заголовки секций (Н2) */
-.section-title {
-  color: #000000;
-  font-size: 30px;
-  line-height: 36px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 /* Заголовок рассылки (главная страница)*/
 .newsletter-section-title {
   color: #ffffff;
@@ -457,7 +502,6 @@ body {
 }
 
 /* Социальные сети (футер) */
-
 .footer-social-list {
   width: 107px;
   margin: 0;

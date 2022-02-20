@@ -136,8 +136,11 @@ body {
 
 /* Ссылка пункта правого меню (иконки) */
 .navigation-purchase .navigation-link {
-  min-width: 8px;
-  min-height: 26px;
+  margin: 0;
+  padding: 0;
+  min-width: 42px;
+  min-height: 66px;
+  background-color: #f1f1f1;
 }
 
 /* Мэйн обеих страниц */
@@ -205,6 +208,8 @@ body {
 
 /* Заголовки секций (Н2) */
 .section-title {
+  margin: 0;
+  padding: 0;
   color: #000000;
   font-size: 30px;
   line-height: 36px;
@@ -213,7 +218,6 @@ body {
 }
 
 .advantages-section-title {
-  margin: 0;
   margin-bottom: 31px;
 }
 
@@ -323,8 +327,37 @@ body {
   text-align: center;
 }
 
+/* Преимущества тёмный фон описание (текст) */
 .item-background-dark .advantages-description {
   width: 220px;
+}
+
+/* Секция "Заинтересовались?" */
+.interested {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Секция "Заинтересовались?" заголовок */
+.interested-section-title {
+  margin-top: 90px;
+  margin-bottom: 30px;
+}
+
+/* Секция "Заинтересовались?" описание (текст) */
+.interested-description {
+  width: 720px;
+  line-height: 26px;
+  margin-bottom: 56px;
+}
+
+.button-search-big {
+  width: 575px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 93px;
 }
 
 /* Хедер каталога */
@@ -466,15 +499,7 @@ body {
   background-color: #f2f2f2;
 }
 
-.interested {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
 /* Секция подписки */
-/* Главная страница */
 .newsletter {
   margin: 0 auto;
   display: flex;
@@ -487,35 +512,67 @@ body {
 
 /* Секция с подпиской на главной */
 .newsletter-section {
+  box-sizing: border-box;
   color: #ffffff;
+  padding-top: 94px;
   background-color: #333333;
   background-image: url("../images/newsletter-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;  
 }
 
+/* Секция подписки на главной. Заголовок */
+.newsletter-section-title {
+  margin-bottom: 29px;
+}
+
+.newsletter-description {
+  width: 720px;
+  line-height: 26px;
+  margin-bottom: 46px;
+}
+
 /* Контейнер футера */
 .page-footer-container {
   display: flex;
-  width: 1056px;
+  width: 1060px;
   margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 /* Социальные сети (футер) */
 .footer-social-list {
-  width: 107px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  width: 112px;
   margin: 0;
   margin-right: auto;
   padding: 0;
+  list-style-type: none;
 }
+
+.footer-social-item {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
 .social-link {
-  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: block;
+  min-width: 24px;
+  background-color: #f1f1f1;
 }
 
 /* Контактный телефон (футер) */
 .footer-contacts-phone {
   width: 720px;
+  margin: 0;
   margin-right: 53px;
+  padding: 0;
   color: #000000;
   font-size: 40px;
   line-height: 40px;

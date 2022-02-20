@@ -112,6 +112,7 @@ body {
   margin-left: 186px;
   padding: 0;
   list-style-type: none;
+  border: 1px solid #000000;
 }
 
 /* Правое меню */
@@ -132,10 +133,13 @@ body {
   color: inherit;
   text-align: center;
   text-decoration: none;
+  border: 1px solid #000000;
 }
 
-.navigation-link-purchase {
-  margin-top: 14px;
+/* Ссылка пункта правого меню (иконки) */
+.navigation-purchase .navigation-link {
+  min-width: 8px;
+  min-height: 26px;
 }
 
 /* Мэйн обеих страниц */

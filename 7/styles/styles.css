@@ -204,8 +204,15 @@ body {
   text-transform: uppercase;
 }
 
+.advantages {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Заголовок секции Преимуществ */
 .advantages-section-title {
+  width: 720px;
+  margin: 0 auto;
   margin-bottom: 31px;
 }
 

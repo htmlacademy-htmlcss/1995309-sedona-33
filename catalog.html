@@ -50,7 +50,7 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="button button-search button-search-small" href="#">Хочу сюда</a>
+            <a class="button button-search button-search-small" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -66,22 +66,23 @@
 
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
-              <a class="breadcrumb-link" href="index.html">
+              <a class="breadcrumbs-link breadcrumbs-link-hidden" href="index.html">
                 <span class="visually-hidden">
                   Главная
                 </span>
               </a>
             </li>
-            <li class="breadcrumb-item">
-              <a class="breadcrumb-link">Гостиницы</a>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link">Гостиницы</a>
             </li>
           </ul>
+
           <!-- Формы (фильтры поиска) -->
 
           <div class="catalog-filter-container">
 
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-            <h2 class="visually-hidden" hidden>Фильтры поиска</h2> <!-- Атрибут hidden не забыть убрать!!!! -->
+            <h2 class="visually-hidden">Фильтры поиска</h2>
 
             <!-- Чекбоксы "Инфраструктура" -->
 
@@ -136,8 +137,10 @@
             </fieldset>
 
             <div class="catalog-filter-buttons">
+
             <button class="button" type="submit">Применить</button>
             <button class="button-reset" type="reset">Сбросить</button>
+
             </div>
 
           </form>
@@ -164,6 +167,8 @@
 
           <!-- Отображение гостиниц каталога -->
 
+          <div class="button-view-container">
+
           <button class="button-view card-view" type="button">
             <span class="visually-hidden">Показать карточки</span>
           </button>
@@ -175,6 +180,10 @@
           </button>
 
           </div>
+
+          </div>
+
+          <div class="product-list">
 
           <!-- Гостиница 1 -->
 
@@ -236,11 +245,15 @@
             <span class="rating-text">Рейтинг: 9,2</span>
           </div>
 
+          </div>
 
-          <!-- Пагинация -->
-          <div class="pagination-show-more">
+          <!-- Загрузить ещё -->
+          
+          <div class="container-show-more">
             <button class="button button-show-more" type="button">Загрузить ещё</button>
           </div>
+
+          <!-- Пагинация -->
 
           <div class="pagination">
 
@@ -272,7 +285,7 @@
             </li>
           </ul>
 
-          <label for="hotels-number">Гостиниц на странице:</label>
+          <label class="hotels-number-label" for="hotels-number">Гостиниц на странице:</label>
           <select class="select-control" id="hotels-number">
             <option value="popular">4</option>
             <option value="cheap">8</option>
@@ -287,14 +300,17 @@
 
       <!-- Секция с подпиской -->
 
-      <section class="newsletter page-footer-newsletter">
-        <h2 class="section-title">Подпишитесь на рассылку</h2>
+      <section class="newsletter newsletter-inner">
+
+        <h2 class="section-title inner-newsletter-section-title">Подпишитесь на рассылку</h2>        
         <p class="newsletter-description section-text">Только полезная информация и никакого спама,
           честное бойскаутское!</p>
+
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="field"  placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
+          <input class="newsletter-field"  placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
           <button class="button newsletter-button" type="submit">Подписаться</button>
         </form>
+
       </section>
 
       <!-- Футер -->  

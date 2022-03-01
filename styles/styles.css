@@ -54,6 +54,8 @@ body {
   border-style: none;
   text-decoration: none;
   text-transform: uppercase;
+  padding: 0;
+  margin: 0;
 }
 
 /* Кнопки коричневые */
@@ -674,8 +676,20 @@ body {
   margin-bottom: 46px;
 }
 
+/* Форма подписки */
 .newsletter-form {
-  display: flex;
+  display: grid;
+  grid-template-columns: 600px 200px;
+  grid-template-rows: 60px;
+}
+
+.newsletter-field {
+  padding: 0;
+  border: none;
+  background-color: #f2f2f2;
+  font-family: inherit;
+  font-size: inherit;
+  padding-left: 22px;
 }
 
 /* Контейнер футера */

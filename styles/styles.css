@@ -54,6 +54,8 @@ body {
   border-style: none;
   text-decoration: none;
   text-transform: uppercase;
+  padding: 0;
+  margin: 0;
 }
 
 /* Кнопки коричневые */
@@ -485,7 +487,7 @@ body {
 /* Найдено гостиниц: 38 */
 .hotels-found {
   margin: 0;
-  margin-right: 191px;
+  margin-right: auto;
   padding: 0;
   color: #000000;
   font-size: 30px;
@@ -523,20 +525,85 @@ body {
 
 /* Контейнер с карточками гостиниц */
 .product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  column-gap: 18px;
+  row-gap: 10px;
   margin-bottom: 34px;
+}
+
+/* Карточка гостиницы */
+.hotel-card {
+  display: grid;
+  grid-template-rows: 4px 206px auto auto 37px 37px 4px;
+  grid-template-columns: 20px 159px 141px 20px;
+  row-gap: 16px;
+}
+
+/* Ссылка картинки в карточке */
+.hotel-card-image-link {
+  grid-column: 2/-2;
+  grid-row: 2;
+  margin: 0;
+  padding: 0;
+  height: 206px;
+}
+
+/* Ссылка названия в карточке */ 
+.hotel-card-title-link {
+  grid-column: 2/-2;
+  grid-row: 3;
+  text-decoration: none;
 }
 
 /* Назавание гостиницы в карточке */
 .hotel-card-title {
+  margin: 0;
+  padding: 0;
   color: #000000;
   font-size: 24px;
   line-height: 31px;
   font-weight: 700;
   }
 
- /* Ссылка на подробное описание */ 
-.hotel-card-link {
-  text-decoration: none;
+/* Текст карточек каталога */
+.hotel-card-text,
+.hotel-card-price {
+  margin: 0;
+  padding: 0;
+  line-height: 23px;
+}
+
+/* Тип гостиницы */
+.hotel-card-text {
+  grid-column: 2;
+  grid-row: 4;
+  align-self: end;
+}
+
+/* Цена гостиницы */
+.hotel-card-price {
+  grid-column: 3;
+  grid-row: 4;
+  align-self: end;
+}
+
+/* Кнопка "Подробнее" */
+.button-detail {
+  grid-column: 2;
+  grid-row: 5;
+  box-sizing: border-box;
+  line-height: 21px;
+  align-self: center;
+  width: 133px;
+  padding: 8px;
+}
+
+/* Кнопки "Избранное", "В избранном" */
+.button-favourites,
+.button-favourites-done {
+  grid-column: 3;
+  grid-row: 5;
 }
 
 /* Зелёная кнопка в каталоге */
@@ -544,18 +611,30 @@ body {
   background-color: #7DB54F;
 }
 
-/* Текст карточек каталога */
-.hotel-card-text {
-  line-height: 23px;
-}
+/* Категория гостиницы (звёзды) */
+  .star-category {
+    grid-column: 2;
+    grid-row: 6;
+    align-self: center;
+  }
 
 /* Рейтинг гостиницы */
+.rating-text-container {
+  display: flex;
+  grid-column: 3;
+  grid-row: 6;
+  justify-self: end;
+  height: 37px;
+  width: 160px;
+  background-color: #f2f2f2;
+}
 .rating-text {
   color: inherit;
-  background-color: #f2f2f2;
   font-size: 16px;
   line-height: 21px;
   text-transform: uppercase;
+  align-self: center;
+  margin: auto;
 }
 
 /* Контейнер "Загрузить ещё" */
@@ -674,8 +753,20 @@ body {
   margin-bottom: 46px;
 }
 
+/* Форма подписки */
 .newsletter-form {
-  display: flex;
+  display: grid;
+  grid-template-columns: 600px 200px;
+  grid-template-rows: 60px;
+}
+
+.newsletter-field {
+  padding: 0;
+  border: none;
+  background-color: #f2f2f2;
+  font-family: inherit;
+  font-size: inherit;
+  padding-left: 22px;
 }
 
 /* Контейнер футера */

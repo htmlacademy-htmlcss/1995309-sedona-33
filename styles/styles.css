@@ -28,7 +28,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #f2f2f2;
 }
 
 .visually-hidden {
@@ -70,6 +70,14 @@ body {
 .button-detail,
 .button-favourites {
   font-size: 16px;
+}
+
+/* Главный хедер */
+.page-header {
+  color: #000000;
+  background-color: #ffffff;
+  width: 1200px;
+  margin: auto;
 }
 
 /* Навигация (хедер) */
@@ -135,19 +143,9 @@ body {
 /* Мэйн обеих страниц */
 .main-index,
 .main-inner {
-  color: inherit;
-  background-color: #ffffff;
-}
-
-/* Контейнер основного контента */
-.page-container {
   width: 1200px;
   margin: 0 auto;
-  }
-
-/* Главный хедер */
-.page-header {
-  color: #000000;
+  color: inherit;
   background-color: #ffffff;
 }
 
@@ -549,6 +547,10 @@ body {
   height: 206px;
 }
 
+.hotel-card-image {
+  object-fit: cover;
+}
+
 /* Ссылка названия в карточке */ 
 .hotel-card-title-link {
   grid-column: 2/-2;
@@ -564,7 +566,7 @@ body {
   font-size: 24px;
   line-height: 31px;
   font-weight: 700;
-  }
+}
 
 /* Текст карточек каталога */
 .hotel-card-text,
@@ -728,9 +730,17 @@ body {
 
 }
 
+/* Контейнер секции подписки каталога */
+/* Для белого фона */
+.section-container {
+  width: 1200px;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
 /* Секция с подпиской каталога */
 .newsletter-inner {
-  width: 800px;
+  width: 1200px;
   height: 241px;
   margin-bottom: 140px;
 }
@@ -756,6 +766,7 @@ body {
 /* Форма подписки */
 .newsletter-form {
   display: grid;
+  padding: 0;
   grid-template-columns: 600px 200px;
   grid-template-rows: 60px;
 }
@@ -767,6 +778,12 @@ body {
   font-family: inherit;
   font-size: inherit;
   padding-left: 22px;
+}
+
+.page-footer {
+  width: 1200px;
+  background-color: #ffffff;
+  margin: 0 auto;
 }
 
 /* Контейнер футера */

@@ -70,6 +70,7 @@ body {
 .button-detail,
 .button-favourites {
   font-size: 16px;
+  border-radius: 4px;
 }
 
 /* Главный хедер */
@@ -126,11 +127,47 @@ body {
 
 /* Ссылка пункта правого меню (иконки) */
 .navigation-purchase .navigation-link {
+  position: relative;
   margin: 0;
   padding: 0;
   min-width: 42px;
   min-height: 66px;
-  background-color: #f1f1f1;
+}
+
+/* Ссылка "Избранное" правого меню */
+.navigation-purchase .navigation-item:nth-child(2) {
+  position: relative;
+  margin-right: 20px;
+}
+
+/* Иконки навигации */
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+}
+
+.navigation-purchase .navigation-item:nth-child(2)::after {
+  position: absolute;
+  display: flex;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-family: "PT Sans", sans-serif;
+  font-size: 10px;
+  line-height: 13px;
+  background-color: #7DB54F;
+  justify-content: center;
+  padding-top: 3px;
+  content: "12";
+  top: 15px;
+  right: -2px;
 }
 
 /* Кнопка "Хочу сюда!" */
@@ -258,6 +295,24 @@ body {
   width: 400px;
   height: 384px;
   box-sizing: border-box;
+}
+
+.advices-item {
+  padding-top: 183px;
+  background-repeat: no-repeat;
+  background-position: center bottom 223px;
+}
+
+.advices-item-house {
+  background-image: url("../images/icon-house.svg");
+}
+
+.advices-item-burger {
+  background-image: url("../images/icon-food.svg");
+}
+
+.advices-item-gift {
+  background-image: url("../images/icon-gift.svg");
 }
 
 /* Преимущества тёмный фон */
@@ -399,12 +454,33 @@ body {
 
 /* Хлебные крошки. Спрятанный спан */
 .breadcrumbs-link-hidden {
+  position: relative;
   margin: 0;
-  margin-right: 26px;
+  margin-right: 18px;
   padding: 0;
-  min-width: 12px;
-  min-height: 21px;
-  background-color: #f1f1f1;
+  min-width: 28px;
+  min-height: 27px;
+}
+
+/* Иконка ДОМ хлебные крошки */
+.breadcrumbs-house {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 6px;
+  left: 0;
+  margin: auto;
+  fill: #ffffff;
+}
+
+.breadcrumbs-link-hidden::after {
+  position: absolute;
+  width: 5px;
+  height: 8px;
+  background-image: url("../images/nav-link-1.svg");
+  content: "";
+  left: 30px;
+  top: 7px;
 }
 
 /* Общая форма фильтра */
@@ -510,15 +586,29 @@ body {
 
 /* Кнопки отображения */
 .button-view {
+  position: relative;
   width: 48px;
   height: 48px;
   background-color: #ffffff;
+  border-style: solid;
   border-color: #e5e5e5;
+  border-radius: 4px;
 }
 
 /* Кнопка отображения (активна) */
 .card-view {
   border-color: #000000;
+}
+
+/* Иконка кнопок отображения */
+.button-view-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
 }
 
 /* Контейнер с карточками гостиниц */
@@ -789,7 +879,7 @@ body {
 /* Контейнер футера */
 .page-footer-container {
   display: flex;
-  width: 1060px;
+  width: 1076px;
   margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -800,7 +890,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content:space-between;
-  width: 112px;
+  width: 128px;
   margin: 0;
   margin-right: auto;
   padding: 0;
@@ -816,11 +906,21 @@ body {
 
 /* Ссылка соцсетей */
 .social-link {
+  position: relative;
   margin: 0;
   padding: 0;
   display: block;
-  min-width: 24px;
-  background-color: #f1f1f1;
+  min-width: 40px;
+}
+
+.social-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #83B3D3;
 }
 
 /* Контактный телефон (футер) */

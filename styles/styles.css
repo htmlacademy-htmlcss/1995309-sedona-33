@@ -56,6 +56,7 @@ body {
   text-transform: uppercase;
   padding: 0;
   margin: 0;
+  border-radius: 4px;
 }
 
 /* Кнопки коричневые */
@@ -70,7 +71,6 @@ body {
 .button-detail,
 .button-favourites {
   font-size: 16px;
-  border-radius: 4px;
 }
 
 /* Главный хедер */
@@ -406,6 +406,7 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
   margin-bottom: 93px;
+  border-radius: 10px;
 }
 
 /* Хедер каталога */
@@ -719,6 +720,7 @@ body {
   height: 37px;
   width: 160px;
   background-color: #f2f2f2;
+  border-radius: 4px;
 }
 .rating-text {
   color: inherit;
@@ -745,6 +747,7 @@ body {
 .button-show-more {
   width: 620px;
   height: 60px;
+  border-radius: 10px;
 }
 
 /* Контейнер с пагинацией */
@@ -868,6 +871,11 @@ body {
   font-family: inherit;
   font-size: inherit;
   padding-left: 22px;
+  border-radius: 10px 0 0 10px;
+}
+
+.newsletter-button {
+  border-radius: 0 10px 10px 0;;
 }
 
 .page-footer {

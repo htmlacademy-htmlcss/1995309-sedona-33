@@ -44,6 +44,7 @@ body {
 
 /* Кнопки (общее) */
 .button {
+  box-sizing: border-box;
   font-family: inherit;
   font-size: 20px;
   line-height: 26px;
@@ -57,6 +58,18 @@ body {
   padding: 0;
   margin: 0;
   border-radius: 4px;
+}
+
+.button:hover {
+  background-color: rgba(104,162,202,1);
+}
+
+.button:active {
+  color: rgba(255,255,255,0.3);
+}
+
+.button:focus {
+  outline: rgba(117,98,87,1) solid 3px;
 }
 
 /* Кнопки коричневые */
@@ -113,6 +126,12 @@ body {
   margin-left: auto;
 }
 
+/* Элемент пункта меню */
+/* Родитель ссылки */
+.navigation-item {
+  position: relative;
+}
+
 /* Ссылка пункта меню */
 .navigation-link {
   display: block;
@@ -125,6 +144,24 @@ body {
   text-decoration: none;
 }
 
+.navigation-link:hover {
+  color: rgba(117,98,87,1);
+}
+
+.navigation-link:active {
+  color: rgba(117,98,87,0.3);
+}
+
+.navigation-link-current::before {
+  position: absolute;
+  right: 17px;
+  bottom: 0;
+  left: 17px;
+  height: 2px;
+  background-color: #756257;
+  content: "";
+}
+
 /* Ссылка пункта правого меню (иконки) */
 .navigation-purchase .navigation-link {
   position: relative;
@@ -134,7 +171,7 @@ body {
   min-height: 66px;
 }
 
-/* Ссылка "Избранное" правого меню */
+/* Элемент "Избранное" правого меню */
 .navigation-purchase .navigation-item:nth-child(2) {
   position: relative;
   margin-right: 20px;
@@ -151,7 +188,16 @@ body {
   fill: #000000;
 }
 
-.navigation-purchase .navigation-item:nth-child(2)::after {
+.navigation-link:hover .navigation-icon {
+  fill: rgba(117,98,87,1);
+}
+
+.navigation-link:active .navigation-icon {
+  fill: rgba(117,98,87,0.3);
+  opacity
+}
+
+.navigation-link-favourites::after {
   position: absolute;
   display: flex;
   box-sizing: border-box;
@@ -160,6 +206,27 @@ body {
   border-radius: 50%;
   color: #ffffff;
   font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  background-color: #7DB54F;
+  justify-content: center;
+  padding-top: 3px;
+  content: "12";
+  top: 15px;
+  right: -2px;
+}
+
+.navigation-link-favourites:active::after {
+  position: absolute;
+  display: flex;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: rgba(255,255,255,0.3);
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
   font-size: 10px;
   line-height: 13px;
   background-color: #7DB54F;
@@ -175,6 +242,27 @@ body {
   display: block;
   padding: 6px 35px 5px;
   margin-top: 14px;
+}
+
+/* Коричневые кнопки "Хочу сюда!" "Подробнее" "Поиск гостиницы" */
+/* Наведение */
+.button-search:hover,
+.button-detail:hover {
+  background-color: #615048;
+}
+
+/* Коричневые кнопки "Хочу сюда!" "Подробнее" "Поиск гостиницы" */
+/* Нажатие */
+.button-search:active,
+.button-detail:active {
+  color: rgba(255,255,255,0.3);
+}
+
+/* Коричневые кнопки "Хочу сюда!" "Подробнее" "Поиск гостиницы" */
+/* Фокус */
+.button-search:focus,
+.button-detail:focus {
+  outline: #83B3D3 solid 3px;
 }
 
 /* Мэйн обеих страниц */
@@ -433,7 +521,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 60px;
-  line-height: 78px;
+  line-height: 68px;
 }
 
 /* Хлебные крошки. Список */
@@ -448,19 +536,25 @@ body {
 /* Хлебные крошки. Ссылка */
 .breadcrumbs-link {
   display: block;
+  box-sizing: border-box;
+  min-height: 21px;
+  min-width: 83px;
   color: #ffffff;
   font-size: 16px;
   line-height: 21px;
+  text-decoration: none;
+  text-align: center;
+  align-self: bottom;
 }
 
 /* Хлебные крошки. Спрятанный спан */
 .breadcrumbs-link-hidden {
   position: relative;
   margin: 0;
-  margin-right: 18px;
+  margin-right: 16px;
   padding: 0;
-  min-width: 28px;
-  min-height: 27px;
+  min-width: 22px;
+  min-height: 21px;
 }
 
 /* Иконка ДОМ хлебные крошки */
@@ -468,10 +562,23 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 6px;
+  bottom: 0;
   left: 0;
   margin: auto;
   fill: #ffffff;
+}
+
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
+}
+
+.breadcrumbs-link:focus {
+  outline: #83B3D3 solid 3px;
+  border-radius: 2px;
 }
 
 .breadcrumbs-link-hidden::after {
@@ -480,7 +587,7 @@ body {
   height: 8px;
   background-image: url("../images/nav-link-1.svg");
   content: "";
-  left: 30px;
+  left: 27px;
   top: 7px;
 }
 
@@ -525,6 +632,7 @@ body {
 .catalog-filter-buttons {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 /* Кнопка фильтра "Применить" */
@@ -534,15 +642,36 @@ body {
   margin-bottom: 20px;
 }
 
+.catalog-filter-buttons .button:focus {
+  outline: #ffffff solid 3px;
+}
+
 /* Кнопка сброса в сортировке */
 .button-reset {
   color: #ffffff;
   background-color: transparent;
   border-style: none;
   font-size: 18px;
+  line-height: 23px;
   text-align: center;
-  width: 160px;
-  height: 23px;
+  width: 94px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  padding-top: 1px;
+}
+
+.button-reset:hover {
+  color: rgba(225,225,225,0.6);
+}
+
+.button-reset:active {
+  color: rgba(225,225,225,0.3);
+}
+
+.button-reset:focus {
+  outline: #83B3D3 solid 3px;
+  border-radius: 1px;
 }
 
 /* Секция с карточками каталога */
@@ -596,6 +725,18 @@ body {
   border-radius: 4px;
 }
 
+.button-view:hover {
+  border-color: #83B3D3;
+}
+
+.button-view:active {
+  border-color: #000000;
+}
+
+.button-view:focus {
+  border-color: #83B3D3;
+}
+
 /* Кнопка отображения (активна) */
 .card-view {
   border-color: #000000;
@@ -636,6 +777,18 @@ body {
   margin: 0;
   padding: 0;
   height: 206px;
+}
+
+.hotel-card-image-link:hover {
+  opacity: 0.6;
+}
+
+.hotel-card-image-link:active {
+  opacity: 0.3;
+}
+
+.hotel-card-image-link:focus {
+  outline: #83B3D3 solid 3px;
 }
 
 .hotel-card-image {
@@ -702,6 +855,10 @@ body {
 /* Зелёная кнопка в каталоге */
 .button-favourites-done {
   background-color: #7DB54F;
+}
+
+.button-favourites-done:hover {
+  background-color: #6C9E42;
 }
 
 /* Категория гостиницы (звёзды) */
@@ -864,6 +1021,7 @@ body {
   grid-template-rows: 60px;
 }
 
+/* Текстовое поле формы */
 .newsletter-field {
   padding: 0;
   border: none;
@@ -874,6 +1032,19 @@ body {
   border-radius: 10px 0 0 10px;
 }
 
+.newsletter-field:hover {
+  background-color: #E6E6E6;
+}
+
+.newsletter-field:focus {
+  outline: rgba(131,179,211,1) solid 3px;
+}
+
+.newsletter-field:optional:invalid {
+  border: 2px solid rgba(255,87,87,1);
+}
+
+/* Кнопка формы */
 .newsletter-button {
   border-radius: 0 10px 10px 0;;
 }
@@ -900,6 +1071,7 @@ body {
   justify-content:space-between;
   width: 128px;
   margin: 0;
+  margin-left: -10px;
   margin-right: auto;
   padding: 0;
   list-style-type: none;
@@ -915,10 +1087,12 @@ body {
 /* Ссылка соцсетей */
 .social-link {
   position: relative;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   display: block;
   min-width: 40px;
+  border-radius: 10px;
 }
 
 .social-icon {
@@ -931,12 +1105,30 @@ body {
   fill: #83B3D3;
 }
 
+.social-link:hover .social-icon {
+  fill: #68A2CA;
+}
+
+.social-link:active .social-icon {
+  fill: rgba(104,162,202,0.3);
+}
+
+.social-link:focus .social-icon {
+  fill: #68A2CA;
+}
+
+.social-link:focus {
+  border: 3px solid #83B3D3;
+}
+
 /* Контактный телефон (футер) */
 .footer-contacts-phone {
-  width: 720px;
+  box-sizing: border-box;
+  width: 365px;
+  height: 64px;
   margin: 0;
   margin-right: 53px;
-  padding: 0;
+  padding: 13px 15px 17px 15px;
   color: #000000;
   font-size: 40px;
   line-height: 40px;
@@ -944,8 +1136,48 @@ body {
   text-align: center;
 }
 
+.footer-contacts-phone:hover {
+  color: #756257;
+}
+
+.footer-contacts-phone:active {
+  color: rgba(117,98,87,0.3);
+}
+
+.footer-contacts-phone:focus {
+  color: #756257;
+  outline: #83B3D3 3px solid;
+  border-radius: 7px;
+}
+
 /* Ссылка лого академии */
 .academy-link {
-  width: 115px;
+  position: relative;
+  width: 154px;
+  margin-right: -20px;
   margin-left: auto;
+}
+
+.academy-link:hover .logo-academy {
+  fill: #756257;
+}
+
+.academy-link:active .logo-academy {
+  fill: rgba(117,98,87,0.3);
+}
+
+.academy-link:focus {
+  fill: #756257;
+  outline: #83B3D3 3px solid;
+  border-radius: 7px;
+}
+
+.logo-academy {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
 }

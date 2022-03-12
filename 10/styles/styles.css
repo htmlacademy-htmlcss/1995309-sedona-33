@@ -1,0 +1,1185 @@
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  background-color: #f2f2f2;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: -1;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Кнопки (общее) */
+.button {
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #83B3D3;
+  border-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background-color: rgba(104,162,202,1);
+}
+
+.button:active {
+  color: rgba(255,255,255,0.3);
+}
+
+.button:focus {
+  outline: rgba(117,98,87,1) solid 3px;
+}
+
+/* Кнопки коричневые */
+.button-search,
+.button-detail {
+  background-color: #756257;
+}
+
+/* Маленькие кнопки */
+/* "Хочу сюда", сортировка гостиниц, каталог */
+.button-search-small,
+.button-detail,
+.button-favourites {
+  font-size: 16px;
+}
+
+/* Главный хедер */
+.page-header {
+  color: #000000;
+  background-color: #ffffff;
+  width: 1200px;
+  margin: auto;
+}
+
+/* Навигация (хедер) */
+.navigation {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.logo-navigation {
+  position: absolute;
+  line-height: 0%;
+}
+
+/* Левое меню */
+.navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 345px;
+  margin: 0;
+  margin-left: 169px;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Правое меню */
+.navigation-purchase {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 300px;
+  margin-left: auto;
+}
+
+/* Элемент пункта меню */
+/* Родитель ссылки */
+.navigation-item {
+  position: relative;
+}
+
+/* Ссылка пункта меню */
+.navigation-link {
+  display: block;
+  padding: 20px 17px 19px;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navigation-link:hover {
+  color: rgba(117,98,87,1);
+}
+
+.navigation-link:active {
+  color: rgba(117,98,87,0.3);
+}
+
+.navigation-link-current::before {
+  position: absolute;
+  right: 17px;
+  bottom: 0;
+  left: 17px;
+  height: 2px;
+  background-color: #756257;
+  content: "";
+}
+
+/* Ссылка пункта правого меню (иконки) */
+.navigation-purchase .navigation-link {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-width: 42px;
+  min-height: 65px;
+}
+
+/* Элемент "Избранное" правого меню */
+.navigation-purchase .navigation-item:nth-child(2) {
+  position: relative;
+  margin-right: 20px;
+}
+
+/* Иконки навигации */
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+}
+
+.navigation-link:hover .navigation-icon {
+  fill: rgba(117,98,87,1);
+}
+
+.navigation-link:active .navigation-icon {
+  fill: rgba(117,98,87,0.3);
+  opacity
+}
+
+.navigation-link-favourites::after {
+  position: absolute;
+  display: flex;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  background-color: #7DB54F;
+  justify-content: center;
+  padding-top: 3px;
+  content: "12";
+  top: 15px;
+  right: -2px;
+}
+
+.navigation-link-favourites:active::after {
+  position: absolute;
+  display: flex;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: rgba(255,255,255,0.3);
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  background-color: #7DB54F;
+  justify-content: center;
+  padding-top: 3px;
+  content: "12";
+  top: 15px;
+  right: -2px;
+}
+
+/* Кнопка "Хочу сюда!" */
+.button-search-small {
+  display: block;
+  padding: 6px 34px 5px;
+  margin-top: 14px;
+}
+
+/* Коричневые кнопки "Хочу сюда!" "Подробнее" "Поиск гостиницы" */
+/* Наведение */
+.button-search:hover,
+.button-detail:hover {
+  background-color: #615048;
+}
+
+/* Коричневые кнопки "Хочу сюда!" "Подробнее" "Поиск гостиницы" */
+/* Нажатие */
+.button-search:active,
+.button-detail:active {
+  color: rgba(255,255,255,0.3);
+}
+
+/* Коричневые кнопки "Хочу сюда!" "Подробнее" "Поиск гостиницы" */
+/* Фокус */
+.button-search:focus,
+.button-detail:focus {
+  outline: #83B3D3 solid 3px;
+}
+
+/* Мэйн обеих страниц */
+.main-index,
+.main-inner {
+  width: 1200px;
+  margin: 0 auto;
+  color: inherit;
+  background-color: #ffffff;
+}
+
+/* Основной контент */
+/* Для sticky-footer */
+.main-container {
+  flex-grow: 1;
+}
+
+/* Текст на страницах */
+/* НЕ преимущества. НЕ карточки */
+.section-text {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  line-height: 36px;
+  text-align: center;
+}
+
+/* Фоновая картинка Welcome */
+.welcome-background {
+  width: 1200px;
+  height: 485px;
+  margin-bottom: 63px;
+  background-color: #333333;
+  background-image: url("../images/index-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+/* Дивайдер */
+.welcome-divider {
+  width: 1200px;
+  height: 435px;
+  padding-top: 51px;
+  background-image: url("../images/divider.svg");
+  background-size: 100% auto;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+/* Картинка Welcome... */
+.welcome-picture {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Заголовки секций (Н2) */
+.section-title {
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Заголовок секции Преимуществ */
+.advantages-section-title {
+  width: 720px;
+  margin: 0 auto;
+  margin-bottom: 31px;
+}
+
+/* Секция преимуществ вступление */
+.advantages-intro {
+  margin-bottom: 80px;
+}
+
+/* Список преимуществ */
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+/* Пункт преимуществ */
+.advantages-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Контейнер первого пункта */
+.advantages-item-container {
+  display: flex;
+}
+
+/* Подсписок */
+.advices-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Преимущества контейнер с текстом */
+.advantages-item-text,
+.advices-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 384px;
+  box-sizing: border-box;
+}
+
+.advices-item {
+  padding-top: 185px;
+  background-repeat: no-repeat;
+  background-position: center bottom 223px;
+}
+
+.advices-item-house {
+  background-image: url("../images/icon-house.svg");
+}
+
+.advices-item-burger {
+  background-image: url("../images/icon-food.svg");
+}
+
+.advices-item-gift {
+  background-image: url("../images/icon-gift.svg");
+}
+
+/* Преимущества тёмный фон */
+.item-background-dark {
+  color: #ffffff;
+  background-color: #83B3D3;
+}
+
+/* Преимущества самый светлый фон */
+.item-background-light12 {
+  color: #333333;
+  background-color: rgba(131,179,211,0.12);
+}
+
+/* Преимущества светлый фон */
+.item-background-light20 {
+  color: #333333;
+  background-color: rgba(131,179,211,0.2);
+}
+
+/* Преимущества и Советы заголовок */
+.item-title {
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Преимущества заголовок */
+.advantages-item-text .item-title {
+  margin-top: 98px;
+  margin-bottom: 29px;
+}
+
+/* Преимущества чёрный заголовок */
+.advantages-item-title,
+.advices-item-title {
+  color: #000000;
+}
+
+/* Советы заголовок */
+.advices-item-title {
+  margin-bottom: 19px;
+}
+
+/* Преимущества номер */
+.advantages-number {
+  margin-bottom: 30px;
+}
+
+/* Преимущества описание (текст) */
+.advantages-description,
+.advices-description {
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  text-align: center;
+}
+
+/* Преимущества тёмный фон описание (текст) */
+.item-background-dark .advantages-description {
+  width: 220px;
+}
+
+/* Секция "Заинтересовались?" */
+.interested {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Секция "Заинтересовались?" заголовок */
+.interested-section-title {
+  margin-top: 90px;
+  margin-bottom: 30px;
+}
+
+/* Секция "Заинтересовались?" описание (текст) */
+.interested-description {
+  width: 720px;
+  line-height: 26px;
+  margin-bottom: 56px;
+}
+
+/* Кнопка "Поиск гостиницы в Седоне" */
+.button-search-big {
+  width: 575px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  margin-bottom: 92px;
+  border-radius: 10px;
+}
+
+/* Хедер каталога */
+.inner-header {
+  height: 408px;
+  margin-bottom: 44px;
+  color: #ffffff;
+  background-color: #333333;
+  background-image: url("../images/catalog-background.jpg");
+  background-repeat: no-repeat;
+  font-size: 18px;
+  line-height: 31px;
+}
+
+/* Контейнер контента каталога */
+.inner-header-content {
+  width: 1060px;
+  margin: 0 auto;
+  padding-top: 35px;
+}
+
+/* Н1 страницы каталога */
+.inner-header-title {
+  margin: 0;
+  padding: 0;
+  font-size: 60px;
+  line-height: 68px;
+}
+
+/* Хлебные крошки. Список */
+.breadcrumbs {
+  display: flex;
+  margin: 0;
+  margin-bottom: 45px;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Хлебные крошки. Ссылка */
+.breadcrumbs-link {
+  display: block;
+  box-sizing: border-box;
+  min-height: 21px;
+  min-width: 83px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 21px;
+  text-decoration: none;
+  text-align: center;
+  align-self: bottom;
+}
+
+/* Хлебные крошки. Спрятанный спан */
+.breadcrumbs-link-hidden {
+  position: relative;
+  margin: 0;
+  margin-right: 16px;
+  padding: 0;
+  min-width: 22px;
+  min-height: 21px;
+}
+
+/* Иконка ДОМ хлебные крошки */
+.breadcrumbs-house {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #ffffff;
+}
+
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
+}
+
+.breadcrumbs-link:focus {
+  outline: #83B3D3 solid 3px;
+  border-radius: 2px;
+}
+
+.breadcrumbs-link-hidden::after {
+  position: absolute;
+  width: 5px;
+  height: 8px;
+  background-image: url("../images/nav-link-1.svg");
+  content: "";
+  left: 27px;
+  top: 7px;
+}
+
+/* Общая форма фильтра */
+.catalog-filter {
+  display: flex;
+}
+
+/* Группа списка фильтра */
+.catalog-filter-group {
+  margin: 0;
+  padding: 0;
+  width: 150px;
+}
+
+/* Фильтр инфраструктуры */
+.catalog-filter-group-infrastructure {
+  margin-right: 67px;
+}
+
+/* Фильтр типа жилья */
+.catalog-filter-group-type {
+  margin-right: auto;
+}
+
+/* Название подраздела каталога */
+.catalog-filter-title {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+/* Список фильтра */
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+}
+
+/* Применить и Сбросить */
+.catalog-filter-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Кнопка фильтра "Применить" */
+.catalog-filter-buttons .button {
+  width: 160px;
+  height: 48px;
+  margin-bottom: 20px;
+}
+
+.catalog-filter-buttons .button:focus {
+  outline: #ffffff solid 3px;
+}
+
+/* Кнопка сброса в сортировке */
+.button-reset {
+  color: #ffffff;
+  background-color: transparent;
+  border-style: none;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  width: 94px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  padding-top: 1px;
+}
+
+.button-reset:hover {
+  color: rgba(225,225,225,0.6);
+}
+
+.button-reset:active {
+  color: rgba(225,225,225,0.3);
+}
+
+.button-reset:focus {
+  outline: #83B3D3 solid 3px;
+  border-radius: 1px;
+}
+
+/* Секция с карточками каталога */
+.catalog-hotels {
+  width: 1056px;
+  margin: 0 auto;
+}
+
+/* Подпись над каталогом + кнопки отображения */
+.hotels-found-container {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  margin-bottom: 53px;
+}
+
+/* Найдено гостиниц: 38 */
+.hotels-found {
+  margin: 0;
+  margin-right: auto;
+  padding: 0;
+  color: #000000;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Селекты страницы каталога */
+.select-control {
+  width: 287px;
+  height: 48px;
+  margin-right: 81px;
+}
+
+/* Контейнер кнопок отображения */
+.button-view-container {
+  display: flex;
+  justify-content: space-between;
+  width: 160px;
+  height: 48px;
+}
+
+/* Кнопки отображения */
+.button-view {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  background-color: #ffffff;
+  border-style: solid;
+  border-color: #e5e5e5;
+  border-radius: 4px;
+}
+
+.button-view:hover {
+  border-color: #83B3D3;
+}
+
+.button-view:active {
+  border-color: #000000;
+}
+
+.button-view:focus {
+  border-color: #83B3D3;
+}
+
+/* Кнопка отображения (активна) */
+.card-view {
+  border-color: #000000;
+}
+
+/* Иконка кнопок отображения */
+.button-view-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+}
+
+/* Контейнер с карточками гостиниц */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  column-gap: 18px;
+  row-gap: 10px;
+  margin-bottom: 34px;
+}
+
+/* Карточка гостиницы */
+.hotel-card {
+  display: grid;
+  grid-template-rows: 4px 206px auto auto 37px 37px 4px;
+  grid-template-columns: 20px 159px 141px 20px;
+  row-gap: 16px;
+}
+
+/* Ссылка картинки в карточке */
+.hotel-card-image-link {
+  grid-column: 2/-2;
+  grid-row: 2;
+  margin: 0;
+  padding: 0;
+  height: 206px;
+}
+
+.hotel-card-image-link:hover {
+  opacity: 0.6;
+}
+
+.hotel-card-image-link:active {
+  opacity: 0.3;
+}
+
+.hotel-card-image-link:focus {
+  outline: #83B3D3 solid 3px;
+}
+
+.hotel-card-image {
+  object-fit: cover;
+}
+
+/* Ссылка названия в карточке */ 
+.hotel-card-title-link {
+  grid-column: 2/-2;
+  grid-row: 3;
+  text-decoration: none;
+}
+
+/* Назавание гостиницы в карточке */
+.hotel-card-title {
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 700;
+}
+
+/* Текст карточек каталога */
+.hotel-card-text,
+.hotel-card-price {
+  margin: 0;
+  padding: 0;
+  line-height: 23px;
+}
+
+/* Тип гостиницы */
+.hotel-card-text {
+  grid-column: 2;
+  grid-row: 4;
+  align-self: end;
+}
+
+/* Цена гостиницы */
+.hotel-card-price {
+  grid-column: 3;
+  grid-row: 4;
+  align-self: end;
+}
+
+/* Кнопка "Подробнее" */
+.button-detail {
+  grid-column: 2;
+  grid-row: 5;
+  box-sizing: border-box;
+  line-height: 21px;
+  align-self: center;
+  width: 133px;
+  padding: 8px;
+}
+
+/* Кнопки "Избранное", "В избранном" */
+.button-favourites,
+.button-favourites-done {
+  grid-column: 3;
+  grid-row: 5;
+}
+
+/* Зелёная кнопка в каталоге */
+.button-favourites-done {
+  background-color: #7DB54F;
+}
+
+.button-favourites-done:hover {
+  background-color: #6C9E42;
+}
+
+/* Категория гостиницы (звёзды) */
+  .star-category {
+    grid-column: 2;
+    grid-row: 6;
+    align-self: center;
+  }
+
+/* Рейтинг гостиницы */
+.rating-text-container {
+  display: flex;
+  grid-column: 3;
+  grid-row: 6;
+  justify-self: end;
+  height: 37px;
+  width: 160px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+.rating-text {
+  color: inherit;
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
+  align-self: center;
+  margin: auto;
+}
+
+/* Контейнер "Загрузить ещё" */
+.container-show-more {
+  display: flex;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  width: 1056px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Кнопка "Загрузить ещё" */
+.button-show-more {
+  width: 620px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+/* Контейнер с пагинацией */
+.pagination {
+  display: flex;
+  width: 1056px;
+  height: 55px;
+  align-items: center;
+  margin-bottom: 73px;
+}
+
+/* Список пагинации */
+.pagination-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Пункт списка пагинации (кроме последнего) */
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+/* Ссылка кнопки пагинации */
+.pagination-link {
+  display: flex;
+  box-sizing: border-box;
+  width: 55px;
+  height: 55px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Активная кнопка пагинации */
+.pagination-current {
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
+/* Подпись селектора количества карточек */
+.hotels-number-label {
+  margin-left: auto;
+  margin-right: 51px;
+}
+
+/* Селект в разделе пагинации */
+.pagination .select-control {
+  width: 160px;
+  margin: 0;
+}
+
+/* Секция c подпиской */
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* Секция с подпиской на главной */
+.newsletter-section {
+  width: 1200px;
+  height: 411px;
+  color: #ffffff;
+  padding-top: 94px;
+  background-color: #333333;
+  background-image: url("../images/newsletter-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+
+}
+
+/* Контейнер секции подписки каталога */
+/* Для белого фона */
+.section-container {
+  width: 1200px;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+/* Секция с подпиской каталога */
+.newsletter-inner {
+  width: 1200px;
+  height: 241px;
+  margin-bottom: 140px;
+}
+
+/* Заголовок подписки на главной */
+.newsletter-section-title {
+  color: #ffffff;
+  margin-bottom: 29px;
+}
+
+/* Заголовок подписки каталога */
+.inner-newsletter-section-title {
+  margin-bottom: 46px;
+}
+
+/* Текст в секции с рассылкой */
+.newsletter-description {
+  width: 720px;
+  line-height: 26px;
+  margin-bottom: 46px;
+}
+
+/* Форма подписки */
+.newsletter-form {
+  display: grid;
+  padding: 0;
+  grid-template-columns: 600px 200px;
+  grid-template-rows: 60px;
+}
+
+/* Текстовое поле формы */
+.newsletter-field {
+  padding: 0;
+  border: none;
+  background-color: #f2f2f2;
+  font-family: inherit;
+  font-size: inherit;
+  padding-left: 22px;
+  border-radius: 10px 0 0 10px;
+}
+
+.newsletter-field:hover {
+  background-color: #E6E6E6;
+}
+
+.newsletter-field:focus {
+  outline: rgba(131,179,211,1) solid 3px;
+}
+
+.newsletter-field:optional:invalid {
+  border: 2px solid rgba(255,87,87,1);
+}
+
+/* Кнопка формы */
+.newsletter-button {
+  border-radius: 0 10px 10px 0;;
+}
+
+.page-footer {
+  width: 1200px;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+/* Контейнер футера */
+.page-footer-container {
+  display: flex;
+  width: 1076px;
+  margin: 0 auto;
+  padding-top: 26px;
+  padding-bottom: 40px;
+}
+
+/* Социальные сети (футер) */
+.footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  width: 128px;
+  margin: 0;
+  margin-left: 0px;
+  margin-right: 228px;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Пункт списка соцсетей */
+.footer-social-item {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* Ссылка соцсетей */
+.social-link {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 10px;
+}
+
+.social-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #83B3D3;
+}
+
+.social-link:hover .social-icon {
+  fill: #68A2CA;
+}
+
+.social-link:active .social-icon {
+  fill: rgba(104,162,202,0.3);
+}
+
+.social-link:focus .social-icon {
+  fill: #68A2CA;
+}
+
+.social-link:focus {
+  border: 3px solid #83B3D3;
+}
+
+/* Контактный телефон (футер) */
+.footer-contacts-phone {
+  box-sizing: border-box;
+  width: 365px;
+  height: 64px;
+  margin: 0;
+  margin-right: 53px;
+  padding: 14px 15px 18px 15px;
+  color: #000000;
+  font-size: 40px;
+  line-height: 40px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.footer-contacts-phone:hover {
+  color: #756257;
+}
+
+.footer-contacts-phone:active {
+  color: rgba(117,98,87,0.3);
+}
+
+.footer-contacts-phone:focus {
+  color: #756257;
+  outline: #83B3D3 3px solid;
+  border-radius: 7px;
+}
+
+/* Ссылка лого академии */
+.academy-link {
+  position: relative;
+  width: 154px;
+  margin-right: -10px;
+  margin-left: auto;
+}
+
+.academy-link:hover .logo-academy {
+  fill: #756257;
+}
+
+.academy-link:active .logo-academy {
+  fill: rgba(117,98,87,0.3);
+}
+
+.academy-link:focus {
+  fill: #756257;
+  outline: #83B3D3 3px solid;
+  border-radius: 7px;
+}
+
+.logo-academy {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+}

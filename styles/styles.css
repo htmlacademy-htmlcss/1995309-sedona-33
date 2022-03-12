@@ -111,9 +111,9 @@ body {
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  width: 500px;
+  width: 345px;
   margin: 0;
-  margin-left: 186px;
+  margin-left: 169px;
   padding: 0;
   list-style-type: none;
 }
@@ -135,7 +135,7 @@ body {
 /* Ссылка пункта меню */
 .navigation-link {
   display: block;
-  padding: 20px 17px;
+  padding: 20px 17px 19px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -168,7 +168,7 @@ body {
   margin: 0;
   padding: 0;
   min-width: 42px;
-  min-height: 66px;
+  min-height: 65px;
 }
 
 /* Элемент "Избранное" правого меню */
@@ -240,7 +240,7 @@ body {
 /* Кнопка "Хочу сюда!" */
 .button-search-small {
   display: block;
-  padding: 6px 35px 5px;
+  padding: 6px 34px 5px;
   margin-top: 14px;
 }
 
@@ -304,8 +304,8 @@ body {
 /* Дивайдер */
 .welcome-divider {
   width: 1200px;
-  height: 434px;
-  padding-top: 52px;
+  height: 435px;
+  padding-top: 51px;
   background-image: url("../images/divider.svg");
   background-size: 100% auto;
   background-position: center bottom;
@@ -386,7 +386,7 @@ body {
 }
 
 .advices-item {
-  padding-top: 183px;
+  padding-top: 185px;
   background-repeat: no-repeat;
   background-position: center bottom 223px;
 }
@@ -433,8 +433,8 @@ body {
 
 /* Преимущества заголовок */
 .advantages-item-text .item-title {
-  margin-top: 97px;
-  margin-bottom: 30px;
+  margin-top: 98px;
+  margin-bottom: 29px;
 }
 
 /* Преимущества чёрный заголовок */
@@ -445,7 +445,7 @@ body {
 
 /* Советы заголовок */
 .advices-item-title {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
 /* Преимущества номер */
@@ -491,9 +491,9 @@ body {
 /* Кнопка "Поиск гостиницы в Седоне" */
 .button-search-big {
   width: 575px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  margin-bottom: 93px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  margin-bottom: 92px;
   border-radius: 10px;
 }
 
@@ -1060,7 +1060,7 @@ body {
   display: flex;
   width: 1076px;
   margin: 0 auto;
-  padding-top: 40px;
+  padding-top: 26px;
   padding-bottom: 40px;
 }
 
@@ -1071,8 +1071,8 @@ body {
   justify-content:space-between;
   width: 128px;
   margin: 0;
-  margin-left: -10px;
-  margin-right: auto;
+  margin-left: 0px;
+  margin-right: 228px;
   padding: 0;
   list-style-type: none;
 }
@@ -1082,15 +1082,16 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 /* Ссылка соцсетей */
 .social-link {
   position: relative;
   box-sizing: border-box;
+  display: block;
   margin: 0;
   padding: 0;
-  display: block;
   height: 40px;
   min-width: 40px;
   border-radius: 10px;
@@ -1129,7 +1130,7 @@ body {
   height: 64px;
   margin: 0;
   margin-right: 53px;
-  padding: 13px 15px 17px 15px;
+  padding: 14px 15px 18px 15px;
   color: #000000;
   font-size: 40px;
   line-height: 40px;
@@ -1155,7 +1156,7 @@ body {
 .academy-link {
   position: relative;
   width: 154px;
-  margin-right: -20px;
+  margin-right: -10px;
   margin-left: auto;
 }
 

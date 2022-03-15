@@ -270,7 +270,7 @@
 
             <p class="field-group date-field-group">
               <label class="guest-form-date" for="date-in">Дата заезда:</label>
-              <input class="guest-form-date-field guest-field" type="text" id="date-in" name="date-in" placeholder="Укажите дату" value="27 апреля 2020" aria-invalid="true">
+              <input class="guest-form-date-field guest-field" type="text" id="date-in" name="date-in" placeholder="Укажите дату" value="27 апреля 2020" required aria-invalid="true">
               <span class="validation invalid-text"></span>
               <span class="guest-form-icon">
                 <svg aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".3" fill="#000">
@@ -284,7 +284,7 @@
 
             <p class="field-group date-field-group">
               <label class="guest-form-date" for="date-out">Дата выезда:</label>
-              <input class="guest-form-date-field guest-field" type="text" id="date-out" name="date-out" placeholder="Укажите дату" value="1 сентября 2021" required>
+              <input class="guest-form-date-field guest-field" type="text" id="date-out" name="date-out" placeholder="Укажите дату" value="1 сентября 2021" required aria-invalid="false">
               <span class="validation valid-text"></span>
               <span class="guest-form-icon">
                 <svg aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".3" fill="#000">
@@ -300,7 +300,7 @@
 
             <p class="field-group">
               <label class="guest-form-number" for="guest-adult">Взрослые:</label>
-              <input class="guest-form-number-field guest-field" type="number" id="guest-adult" name="guest-adult" placeholder="1" value="2">
+              <input class="guest-form-number-field guest-field" type="number" id="guest-adult" name="guest-adult" placeholder="1" value="2" required>
               <button class="change-number number-minus">
                 <span class="visually-hidden">Уменьшить количество взрослых</span>
               </button>
@@ -310,7 +310,16 @@
             </p>
 
             <p class="field-group">
-              <label class="guest-form-number" for="guest-child">Дети:</label>
+
+              <span class="form-label">
+                <label class="form-label form-label-icon guest-form-number" for="guest-child">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button">
+                    i
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+              </span>
               <input class="guest-form-number-field guest-field" type="number" id="guest-child" name="guest-child" placeholder="0" value="1">
               <button class="change-number number-minus">
                 <span class="visually-hidden">Уменьшить количество детей</span>

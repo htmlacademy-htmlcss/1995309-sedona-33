@@ -1708,22 +1708,76 @@ body {
   width: 99px;
 }
 
+.form-label-icon {
+  position: relative;
+  wrap: wrap;
+}
+
 /* Иконка с информацией */
-.field-group:last-child .guest-form-number::after {
-  position: absolute;
+.tooltip-toggle {
   box-sizing: border-box;
-  top: 8px;
-  right: 18px;
-  width: 25px;
+  width: 25;
   height: 25px;
   content: "i";
   background-color: #83B3D3;
+  border: none;
   border-radius: 50%;
   color: #ffffff;
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
+  margin: 0;
   padding: 5px 11px;
+  cursor: pointer;
+}
+
+.tooltip-toggle:hover {
+  background-color: #68A2CA;
+}
+
+.tooltip {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 15px;
+  left: 53px;
+}
+
+.tooltip-text {
+  background-color: #333333;
+  color: #ffffff;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: none;
+  padding: 20px 18px 23px 22px;
+  border-radius: 10px;
+  display: block;
+  width: 256px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  position: absolute;
+  top: 40px;
+  right: -115px;
+  display: none;
+}
+
+.tooltip-text:after {
+  content:'';
+  background-image: url("../images/modal-tooltip-triangle.svg");
+  width: 19px;
+  height: 9px;
+  position:absolute;
+  bottom: 100%;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
 }
 
 .guest-form-number-field::-webkit-outer-spin-button,

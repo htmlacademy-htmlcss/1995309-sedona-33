@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <div class="box-shadow">
     <header class="page-header">
 
       <!-- Навигация -->
@@ -175,7 +176,7 @@
           Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие
           предложения гостиниц в Седоне
         </p>
-        <a class="button button-search button-search-big" href="catalog.html">Поиск гостиницы в Седоне</a>
+        <a class="button button-search button-search-big" href="#">Поиск гостиницы в Седоне</a>
       </section>
     </main>
 
@@ -199,7 +200,7 @@
 
       <h2 class="visually-hidden">Наши контакты</h2>
       
-      <div class="page-footer-container">
+      <div class="page-footer-container page-footer-container-index">
         
         <!-- Соцсети -->
 
@@ -249,5 +250,95 @@
       </div>  
 
     </footer>
+
+    <!-- Модальное окно -->
+    <div class="modal-container modal-container-close">
+
+      <div class="modal modal-search">
+
+        <button class="modal-close-button">
+          <svg class="modal-close-icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z"/>
+          </svg>
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          
+          <form class="guest-form" action="https://echo.htmlacademy.ru/" method="post">
+
+            <p class="field-group date-field-group">
+              <label class="guest-form-date" for="date-in">Дата заезда:</label>
+              <input class="guest-form-date-field guest-field" type="text" id="date-in" name="date-in" placeholder="Укажите дату" value="27 апреля 2020" required aria-invalid="true">
+              <span class="validation invalid-text"></span>
+              <span class="guest-form-icon">
+                <svg aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".3" fill="#000">
+                  <path d="M5.5 10c.3 0 .5-.2.5-.5S5.8 9 5.5 9s-.5.2-.5.5.2.5.5.5Z"/>
+                  <path d="M14 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h13c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h13v7ZM1 6V3h2v2h1V3h7v2h1V3h2v3H1Z"/>
+                  <path d="M7.5 10c.3 0 .5-.2.5-.5S7.8 9 7.5 9s-.5.2-.5.5.2.5.5.5ZM9.5 10c.3 0 .5-.2.5-.5S9.8 9 9.5 9s-.5.2-.5.5.2.5.5.5ZM5.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.5 10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5ZM3.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM7.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM9.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM11.5 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM11.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z"/>
+                </g></svg>
+              </span>
+              <span class="visually-hidden">Выбор даты</span>
+            </p>
+
+            <p class="field-group date-field-group">
+              <label class="guest-form-date" for="date-out">Дата выезда:</label>
+              <input class="guest-form-date-field guest-field" type="text" id="date-out" name="date-out" placeholder="Укажите дату" value="1 сентября 2021" required aria-invalid="false">
+              <span class="validation valid-text"></span>
+              <span class="guest-form-icon">
+                <svg aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity=".3" fill="#000">
+                  <path d="M5.5 10c.3 0 .5-.2.5-.5S5.8 9 5.5 9s-.5.2-.5.5.2.5.5.5Z"/>
+                  <path d="M14 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h13c.5 0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h13v7ZM1 6V3h2v2h1V3h7v2h1V3h2v3H1Z"/>
+                  <path d="M7.5 10c.3 0 .5-.2.5-.5S7.8 9 7.5 9s-.5.2-.5.5.2.5.5.5ZM9.5 10c.3 0 .5-.2.5-.5S9.8 9 9.5 9s-.5.2-.5.5.2.5.5.5ZM5.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.5 10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5ZM3.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM7.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM9.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM11.5 10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM11.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z"/>
+                </g></svg>
+              </span>
+              <span class="visually-hidden">Выбор даты</span>
+            </p>
+
+            <div class="field-number-container">
+
+            <p class="field-group">
+              <label class="guest-form-number" for="guest-adult">Взрослые:</label>
+              <input class="guest-form-number-field guest-field" type="number" id="guest-adult" name="guest-adult" placeholder="1" value="2" required>
+              <button class="change-number number-minus">
+                <span class="visually-hidden">Уменьшить количество взрослых</span>
+              </button>
+              <button class="change-number number-plus">
+                <span class="visually-hidden">Увеличить количество взрослых</span>
+              </button>
+            </p>
+
+            <p class="field-group">
+
+              <span class="form-label">
+                <label class="form-label form-label-icon guest-form-number" for="guest-child">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button">
+                    i
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+              </span>
+              <input class="guest-form-number-field guest-field" type="number" id="guest-child" name="guest-child" placeholder="0" value="1">
+              <button class="change-number number-minus">
+                <span class="visually-hidden">Уменьшить количество детей</span>
+              </button>
+              <button class="change-number number-plus">
+                <span class="visually-hidden">Увеличить количество детей</span>
+              </button>
+            </p>
+
+            </div>
+            
+            <button class="button button-search-hotel" type="submit">Найти</button>
+          </form>
+
+        </section>
+
+      </div>
+
+    </div>
+  </div>
   </body>
 </html>

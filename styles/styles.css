@@ -24,11 +24,21 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  min-width: 1230px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
   background-color: #f2f2f2;
+}
+
+.box-shadow {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 1200px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
 }
 
 .visually-hidden {
@@ -58,6 +68,7 @@ body {
   padding: 0;
   margin: 0;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -513,12 +524,13 @@ body {
 .inner-header-content {
   width: 1060px;
   margin: 0 auto;
-  padding-top: 35px;
+  padding-top: 40px;
 }
 
 /* Н1 страницы каталога */
 .inner-header-title {
   margin: 0;
+  margin-bottom: -1px;
   padding: 0;
   font-size: 60px;
   line-height: 68px;
@@ -551,6 +563,7 @@ body {
 .breadcrumbs-link-hidden {
   position: relative;
   margin: 0;
+  margin-left: -2px;
   margin-right: 16px;
   padding: 0;
   min-width: 22px;
@@ -568,6 +581,8 @@ body {
   fill: #ffffff;
 }
 
+
+/* Хлебные крошки. Состояния  */
 .breadcrumbs-link:hover {
   opacity: 0.6;
 }
@@ -585,7 +600,7 @@ body {
   position: absolute;
   width: 5px;
   height: 8px;
-  background-image: url("../images/nav-link-1.svg");
+  background-image: url("../images/breadcrums-nav.svg");
   content: "";
   left: 27px;
   top: 7px;
@@ -597,25 +612,19 @@ body {
 }
 
 /* Группа списка фильтра */
+/* Общее для всех групп */
 .catalog-filter-group {
   margin: 0;
+  margin-left: 1px;
   padding: 0;
   width: 150px;
-}
-
-/* Фильтр инфраструктуры */
-.catalog-filter-group-infrastructure {
-  margin-right: 67px;
-}
-
-/* Фильтр типа жилья */
-.catalog-filter-group-type {
-  margin-right: auto;
+  border: none;
 }
 
 /* Название подраздела каталога */
 .catalog-filter-title {
   margin: 0;
+  margin-bottom: 26px;
   padding: 0;
   font-size: 20px;
   line-height: 26px;
@@ -626,6 +635,230 @@ body {
 .catalog-filter-list {
   margin: 0;
   padding: 0;
+  list-style-type: none;
+}
+
+/* Элемент списка фильтра */
+.catalog-filter-item {
+  margin-bottom: 5px;
+}
+
+/* Фильтр инфраструктуры */
+.catalog-filter-group-infrastructure {
+  margin-right: 66px;
+}
+
+/* Обёртка чекбоксов и радиокнопок */
+.control {
+  position: relative;
+  display: block;
+  padding-left: 40px;
+}
+
+/* Чекбоксы. Квадратики (стилизация) */
+.control-mark {
+  position: absolute;
+  top: 5px;
+  left: 1px;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+/* Отмеченные чекбоксы (галочки) */
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 12px;
+  height: 10px;
+  background-color: transparent;
+  content: "";
+  background-image: url("../images/checkbox-checked.svg");
+}
+
+/* Чекбоксы. Состояния */
+.control:hover .control-mark {
+  opacity: 0.6;
+}
+
+.control:active .control-mark {
+  opacity: 0.3;
+}
+
+.control:focus .control-mark {
+  opacity: 0.6;
+  outline:#83B3D3 3px solid;
+}
+
+/* Фильтр типа жилья */
+.catalog-filter-group-type {
+  margin-right: 162px;
+}
+
+/* Радиокнопки (кружочки). Стилизация */
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+/* Отмеченные радиокнопки (точки) */
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #3F5E72;
+  content: "";
+}
+
+/* Радиокнопки. Состояния */
+.control:hover .control-mark-radio,
+.control:active .control-mark-radio {
+  opacity: 1;
+}
+
+.control:focus .control-mark {
+  opacity: 1;
+  outline:#83B3D3 3px solid;
+}
+
+/* Range-слайдер. Блок */
+.catalog-filter-group-range {
+  margin: 0;
+  padding: 0;
+}
+
+/* Range-слайдер. Контейнер */
+.range-wrapper-inputs {
+  display: flex;
+  box-sizing: border-box;
+  width: 287px;
+  margin-top: 8px;
+  margin-bottom: 28px;
+}
+
+/* Range-слайдер. Ячейка */
+.catalog-filter-label {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  width: 145px;
+  height: 48px;
+  line-height: 23px;
+  color: rgba(255,255,255,0.3);
+  padding: 0;
+  align-items: center;
+  border: 2px solid #ffffff;
+}
+
+/* Range-слайдер. Левая ячейка */
+.catalog-filter-label:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+/* Range-слайдер. Правая ячейка */
+.catalog-filter-label:last-child {
+  border-radius: 0 4px 4px 0;
+  margin-left: -2px;
+}
+
+.catalog-filter-label:hover {
+  border-color:rgba(255, 255, 255, 0.6);
+}
+
+.catalog-filter-label:active {
+  background-color: rgba(117, 98, 87, 1);
+}
+
+.catalog-filter-label:focus {
+  outline:#83B3D3 3px solid;
+  box-shadow:
+    3px 3px 0 #83B3D3 inset,
+    -3px -3px 0 #83B3D3 inset;
+}
+
+/* Range-слайдер. Цифры */
+.range-input {
+  width: 72px;
+  padding: 0;
+  margin-left: 17px;
+  margin-right: auto;
+  margin-top: 4px;
+  font: inherit;
+  color: #ffffff;
+  line-height: 23px;
+  text-align: start;
+  background-color: transparent;
+  border: none;
+  appearance: textfield;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/* Подписи к цифрам */
+.range-name {
+  margin-right: 15px;
+}
+
+/* Range-слайдер. Шкала */
+.range-scale {
+  position: relative;
+  height: 4px;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Range-слайдер. Диапазон */
+.range-bar {
+  position: absolute;
+  height: 4px;
+  width: 227px;
+  background-color: #ffffff;
+}
+
+/* Range-слайдер. Ползунки */
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Range-слайдер. Ползунки (состояния) */
+.range-toggle:hover {
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+}
+
+.range-toggle:active {
+  outline: 2px solid #83B3D3;
+  box-shadow: 0px 7px 15px rgba(0,0,0,0.4);
+}
+
+.range-toggle:focus {
+  outline: 3px solid #83B3D3;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Range-слайдер. Ползунок min */
+.toggle-min {
+  top: -8px;
+  left: 0px;
+}
+
+/* Range-слайдер. Ползунок max */
+.toggle-max {
+  top: -8px;
+  right: -10px;
 }
 
 /* Применить и Сбросить */
@@ -633,6 +866,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: auto;
+  margin-top: 60px;
 }
 
 /* Кнопка фильтра "Применить" */
@@ -640,8 +875,10 @@ body {
   width: 160px;
   height: 48px;
   margin-bottom: 20px;
+  font-size: 16px;
 }
 
+/* Кнопка фильтра "Применить". Состояния */
 .catalog-filter-buttons .button:focus {
   outline: #ffffff solid 3px;
 }
@@ -659,8 +896,10 @@ body {
   margin: 0;
   padding: 0;
   padding-top: 1px;
+  cursor: pointer;
 }
 
+/* Кнопка сброса. Состояния */
 .button-reset:hover {
   color: rgba(225,225,225,0.6);
 }
@@ -676,6 +915,7 @@ body {
 
 /* Секция с карточками каталога */
 .catalog-hotels {
+  position: relative;
   width: 1056px;
   margin: 0 auto;
 }
@@ -699,11 +939,49 @@ body {
   text-transform: uppercase;
 }
 
-/* Селекты страницы каталога */
-.select-control {
+/* Контейнер селекта */
+.select {
+  position: relative;
+  display: flex;
+  align-items: center;
   width: 287px;
-  height: 48px;
   margin-right: 81px;
+}
+
+/* Селект */
+.select-control {
+  width: 100%;
+  height: 48px;
+  padding: 9px 17px;
+  padding-right: 48px;
+  font: inherit;
+  font-weight: 400;
+  background-color: #ffffff;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
+  background-image: url("../images/select-dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  appearance: none;
+}
+
+/* Селект количество гостиниц */
+.select-control-number {
+  padding-left: 15px;
+}
+
+.select-control:hover {
+  border-color: #83B3D3;
+}
+
+.select-control:active {
+  border-color: #a9a9a9;
+  opacity: 0.3;
+}
+
+.select-control:focus {
+  border-color: #83B3D3;
+  color: #000000;
 }
 
 /* Контейнер кнопок отображения */
@@ -890,6 +1168,7 @@ body {
 
 /* Контейнер "Загрузить ещё" */
 .container-show-more {
+  position: relative;
   display: flex;
   margin: 0;
   margin-bottom: 30px;
@@ -900,11 +1179,37 @@ body {
   align-items: center;
 }
 
+.button-show-more::before,
+.button-show-more::after {
+  content:'';
+  position: absolute;
+  width: 1056px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.button-show-more::before {
+  left: 0;
+  top: 0;
+}
+
+.button-show-more::after {
+  left: 0;
+  bottom: 0;
+}
+
 /* Кнопка "Загрузить ещё" */
 .button-show-more {
   width: 620px;
   height: 60px;
   border-radius: 10px;
+}
+
+.index-columns:first-of-type::after {
+  left: 470px;
+}
+
+.index-columns:last-of-type::after {
+  left: 430px;
 }
 
 /* Контейнер с пагинацией */
@@ -977,7 +1282,6 @@ body {
   background-image: url("../images/newsletter-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-
 }
 
 /* Контейнер секции подписки каталога */
@@ -1050,9 +1354,20 @@ body {
 }
 
 .page-footer {
+  position: relative;
   width: 1200px;
   background-color: #ffffff;
   margin: 0 auto;
+}
+
+.page-footer::before {
+  position: absolute;
+  content: "";
+  width: 1200px;
+  height: 0;
+  border-top: 1px solid #E6E6E6;
+  top: 0;
+  left: 0;
 }
 
 /* Контейнер футера */
@@ -1182,4 +1497,340 @@ body {
   left: 0;
   margin: auto;
   fill: #000000;
+}
+
+/* Модальное окно. Подложка */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-container-close {
+  display: none;
+}
+
+/* Модальное окно. Блок */
+.modal {
+  position: relative;
+  margin: auto;
+  box-sizing: border-box;
+  font-size: "PT Sans", sans-serif;
+  width: 715px;
+  height: 561px;
+  padding: 70px;
+  padding-top: 62px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+}
+
+/* Модальное окно. Кнопка закрытия */
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 54px;
+  right: 70px;
+  width: 53px;
+  height: 53px;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+} 
+
+/* Модальное окно. Кнопка закрытия. Состояния */
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:active {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:active .modal-close-icon{
+  opacity: 0.3;
+}
+
+.modal-close-button:focus {
+  outline: #83B3D3 3px solid;
+}
+
+/* Модальное окно. Иконка закрытия */
+.modal-close-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #000000;
+}
+
+/* Модальное окно. Заголовок */
+.modal-title {
+  margin: 0;
+  margin-bottom: 59px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: start;
+  vertical-align: top;
+}
+
+/* Форма. Обёртка поля */
+.guest-form .field-group {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+/* Обёртка поля */
+.field-group {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  align-items: center;
+}
+
+/* Поле ввода (все поля) */
+.guest-field {
+  border: none;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 700;
+  background-color: #f2f2f2;
+  height: 50px;
+  vertical-align: middle;
+  padding-left: 19px;
+}
+
+
+/* Подписи к полям */
+.guest-form-date,
+.guest-form-number {
+  vertical-align: middle;
+  line-height: 40px;
+}
+
+/* Поля даты */
+.guest-form-date-field {
+  width: 420px;
+}
+
+/* Поля даты. Состояния */
+.guest-form-date-field:hover {
+  background-color: #e6e6e6;
+}
+
+.guest-form-date-field:active {
+  background-color: #ffffff;
+  border: 2px solid #000000;
+}
+
+.guest-form-date-field:focus {
+  background-color: #e6e6e6;
+  outline: #83B3D3 3px solid;
+}
+
+.validation {
+  position: absolute;
+  left: 155px;
+  top: 45px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 400;
+}
+
+.guest-form-date-field + .invalid-text::after {
+  height: 40px;
+  width: 420px;
+  content: "Мы не можем отправить вас в прошлое.";
+  color: rgba(255, 87, 87, 1);
+}
+
+.guest-form-date-field + .valid-text::after {
+  height: 40px;
+  width: 420px;
+  content: "На эти даты есть свободные номера. Пока есть.";
+  color: rgba(51, 51, 51, 1);
+}
+
+/* Поля даты. Иконка календарь */
+.guest-form-icon {
+  position: absolute;
+  right: 18px;
+  cursor: pointer;
+}
+
+/* Контейнер полей с количеством */
+.field-number-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Обёртка поля с количеством */
+.field-number-container .field-group {
+  display: flex;
+}
+
+/* Обёртка поля с количеством. Взрослые */
+.field-number-container .field-group:first-child {
+  width: 288px;
+}
+
+/* Обёртка поля с количеством. Дети */
+.field-number-container .field-group:last-child {
+  width: 230px;
+}
+
+/* Поле ввода. Количество */
+.guest-form-number-field {
+  width: 133px;
+  padding: 0;
+  text-align: center;
+}
+
+/* Подпись к полю ввода. Дети */
+.field-group:last-child .guest-form-number {
+  position: relative;
+  width: 99px;
+}
+
+.form-label-icon {
+  position: relative;
+  wrap: wrap;
+}
+
+/* Иконка с информацией */
+.tooltip-toggle {
+  box-sizing: border-box;
+  width: 25;
+  height: 25px;
+  content: "i";
+  background-color: #83B3D3;
+  border: none;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  margin: 0;
+  padding: 5px 11px;
+  cursor: pointer;
+}
+
+.tooltip-toggle:hover {
+  background-color: #68A2CA;
+}
+
+.tooltip {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 15px;
+  left: 53px;
+}
+
+.tooltip-text {
+  background-color: #333333;
+  color: #ffffff;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: none;
+  padding: 20px 18px 23px 22px;
+  border-radius: 10px;
+  display: block;
+  width: 256px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  position: absolute;
+  top: 40px;
+  right: -115px;
+  display: none;
+}
+
+.tooltip-text:after {
+  content:'';
+  background-image: url("../images/modal-tooltip-triangle.svg");
+  width: 19px;
+  height: 9px;
+  position:absolute;
+  bottom: 100%;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.guest-form-number-field::-webkit-outer-spin-button,
+.guest-form-number-field::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/* Кнопки изменения количества */
+.change-number {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  padding: 0;
+  border: none;
+  border-radius: 1px;
+  background-color: transparent;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.change-number:hover {
+  opacity: 1;
+}
+
+.change-number:active {
+  opacity: 0.2;
+}
+
+.change-number:focus {
+  opacity: 1;
+  outline: #83B3D3 3px solid;
+}
+
+/* Кнопка ПЛЮС */
+.number-plus {
+  right: 16px;
+  background-image: url("../images/modal-plus.svg");
+  background-position: 3px 3px;
+  background-repeat: no-repeat;
+}
+
+/* Кнопка МИНУС */
+.number-minus {
+  right: 99px;
+  background-image: url("../images/modal-minus.svg");
+  background-position: 3px 9px;
+  background-repeat: no-repeat;
+}
+
+/* Кнопка НАЙТИ */
+.button-search-hotel {
+  height: 60px;
+  width: 575px;
+  border-radius: 10px;
 }

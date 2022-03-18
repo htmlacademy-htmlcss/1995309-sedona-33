@@ -24,7 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  min-width: 1230px;
+  min-width: 1280px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -37,7 +37,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  width: 1200px;
+  min-width: 1200px;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
 }
 
@@ -83,18 +83,33 @@ body {
   outline: rgba(117,98,87,1) solid 3px;
 }
 
-/* Кнопки коричневые */
-.button-search,
-.button-detail {
-  background-color: #756257;
-}
-
 /* Маленькие кнопки */
 /* "Хочу сюда", сортировка гостиниц, каталог */
 .button-search-small,
 .button-detail,
 .button-favourites {
   font-size: 16px;
+}
+
+/* Кнопки коричневые "Хочу сюда!" "Подробнее" "Поиск гостиницы" */
+.button-search,
+.button-detail {
+  background-color: #756257;
+}
+
+.button-search:hover,
+.button-detail:hover {
+  background-color: #615048;
+}
+
+.button-search:active,
+.button-detail:active {
+  color: rgba(255,255,255,0.3);
+}
+
+.button-search:focus,
+.button-detail:focus {
+  outline: #83B3D3 solid 3px;
 }
 
 /* Главный хедер */
@@ -122,7 +137,7 @@ body {
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  width: 345px;
+  min-width: 345px;
   margin: 0;
   margin-left: 169px;
   padding: 0;
@@ -185,7 +200,6 @@ body {
 /* Элемент "Избранное" правого меню */
 .navigation-purchase .navigation-item:nth-child(2) {
   position: relative;
-  margin-right: 20px;
 }
 
 /* Иконки навигации */
@@ -252,28 +266,7 @@ body {
 .button-search-small {
   display: block;
   padding: 6px 34px 5px;
-  margin-top: 14px;
-}
-
-/* Коричневые кнопки "Хочу сюда!" "Подробнее" "Поиск гостиницы" */
-/* Наведение */
-.button-search:hover,
-.button-detail:hover {
-  background-color: #615048;
-}
-
-/* Коричневые кнопки "Хочу сюда!" "Подробнее" "Поиск гостиницы" */
-/* Нажатие */
-.button-search:active,
-.button-detail:active {
-  color: rgba(255,255,255,0.3);
-}
-
-/* Коричневые кнопки "Хочу сюда!" "Подробнее" "Поиск гостиницы" */
-/* Фокус */
-.button-search:focus,
-.button-detail:focus {
-  outline: #83B3D3 solid 3px;
+  margin: 14px 0 14px 20px;
 }
 
 /* Мэйн обеих страниц */
@@ -308,7 +301,7 @@ body {
   margin-bottom: 63px;
   background-color: #333333;
   background-image: url("../images/index-background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -316,7 +309,7 @@ body {
 .welcome-divider {
   width: 1200px;
   height: 435px;
-  padding-top: 51px;
+  padding-top: 50px;
   background-image: url("../images/divider.svg");
   background-size: 100% auto;
   background-position: center bottom;
@@ -361,7 +354,6 @@ body {
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin: 0;
   padding: 0;
 }
@@ -376,10 +368,15 @@ body {
 .advantages-item-container {
   display: flex;
 }
+.advantages-picture {
+  height: 100%;
+  object-fit: cover;
+}
 
 /* Подсписок */
 .advices-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -392,26 +389,29 @@ body {
   flex-direction: column;
   align-items: center;
   width: 400px;
-  height: 384px;
+  min-height: 384px;
   box-sizing: border-box;
+  padding-bottom: 30px;
 }
 
 .advices-item {
-  padding-top: 185px;
+  padding-top: 184px;
   background-repeat: no-repeat;
-  background-position: center bottom 223px;
 }
 
 .advices-item-house {
   background-image: url("../images/icon-house.svg");
+  background-position: center top 89px;
 }
 
 .advices-item-burger {
   background-image: url("../images/icon-food.svg");
+  background-position: center top 90px;
 }
 
 .advices-item-gift {
   background-image: url("../images/icon-gift.svg");
+  background-position: center top 85px;
 }
 
 /* Преимущества тёмный фон */
@@ -432,21 +432,23 @@ body {
   background-color: rgba(131,179,211,0.2);
 }
 
+/* Преимущества заголовок */
+.advantages-item-text .item-title {
+  margin-top: 96px;
+  margin-bottom: 30px;
+}
+
 /* Преимущества и Советы заголовок */
 .item-title {
   font-size: 24px;
   line-height: 28px;
   margin: 0;
   padding: 0;
+  max-width: 250px;
   text-align: center;
   text-transform: uppercase;
 }
 
-/* Преимущества заголовок */
-.advantages-item-text .item-title {
-  margin-top: 98px;
-  margin-bottom: 29px;
-}
 
 /* Преимущества чёрный заголовок */
 .advantages-item-title,
@@ -456,12 +458,14 @@ body {
 
 /* Советы заголовок */
 .advices-item-title {
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 }
 
 /* Преимущества номер */
 .advantages-number {
   margin-bottom: 30px;
+  text-align: center;
+  max-width: 250px;
 }
 
 /* Преимущества описание (текст) */
@@ -469,13 +473,13 @@ body {
 .advices-description {
   margin: 0;
   padding: 0;
-  width: 250px;
+  max-width: 250px;
   text-align: center;
 }
 
 /* Преимущества тёмный фон описание (текст) */
 .item-background-dark .advantages-description {
-  width: 220px;
+  max-width: 220px;
 }
 
 /* Секция "Заинтересовались?" */
@@ -483,13 +487,16 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  box-sizing: border-box;
   align-items: center;
+  padding: 30px;
+  margin-bottom: 62px;
 }
 
 /* Секция "Заинтересовались?" заголовок */
 .interested-section-title {
-  margin-top: 90px;
-  margin-bottom: 30px;
+  margin-top: 60px;
+  margin-bottom: 29px;
 }
 
 /* Секция "Заинтересовались?" описание (текст) */
@@ -502,19 +509,19 @@ body {
 /* Кнопка "Поиск гостиницы в Седоне" */
 .button-search-big {
   width: 575px;
-  padding-top: 17px;
-  padding-bottom: 17px;
-  margin-bottom: 92px;
+  padding-top: 20px;
+  padding-bottom: 14px;
   border-radius: 10px;
 }
 
 /* Хедер каталога */
 .inner-header {
-  height: 408px;
+  min-height: 408px;
   margin-bottom: 44px;
   color: #ffffff;
   background-color: #333333;
   background-image: url("../images/catalog-background.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   font-size: 18px;
   line-height: 31px;
@@ -539,9 +546,11 @@ body {
 /* Хлебные крошки. Список */
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   margin-bottom: 45px;
   padding: 0;
+  width: 100%;
   list-style-type: none;
 }
 
@@ -557,14 +566,14 @@ body {
   text-decoration: none;
   text-align: center;
   align-self: bottom;
+  margin: 0;
+  margin-right: 16px;
 }
 
 /* Хлебные крошки. Спрятанный спан */
 .breadcrumbs-link-hidden {
   position: relative;
-  margin: 0;
   margin-left: -2px;
-  margin-right: 16px;
   padding: 0;
   min-width: 22px;
   min-height: 21px;
@@ -581,7 +590,6 @@ body {
   fill: #ffffff;
 }
 
-
 /* Хлебные крошки. Состояния  */
 .breadcrumbs-link:hover {
   opacity: 0.6;
@@ -596,13 +604,17 @@ body {
   border-radius: 2px;
 }
 
-.breadcrumbs-link-hidden::after {
+.breadcrumbs-item-element {
+  position: relative;
+}
+
+.breadcrumbs-item-element::before {
   position: absolute;
   width: 5px;
   height: 8px;
-  background-image: url("../images/breadcrums-nav.svg");
+  background-image: url("../images/breadcrumbs-nav.svg");
   content: "";
-  left: 27px;
+  left: -10px;
   top: 7px;
 }
 
@@ -687,7 +699,7 @@ body {
   opacity: 0.3;
 }
 
-.control:focus .control-mark {
+.control:focus .control-mark{
   opacity: 0.6;
   outline:#83B3D3 3px solid;
 }
@@ -720,7 +732,7 @@ body {
   opacity: 1;
 }
 
-.control:focus .control-mark {
+.control-input:focus .control-mark {
   opacity: 1;
   outline:#83B3D3 3px solid;
 }
@@ -737,7 +749,7 @@ body {
   box-sizing: border-box;
   width: 287px;
   margin-top: 8px;
-  margin-bottom: 28px;
+  margin-bottom: 29px;
 }
 
 /* Range-слайдер. Ячейка */
@@ -746,23 +758,27 @@ body {
   position: relative;
   box-sizing: border-box;
   width: 145px;
-  height: 48px;
+  min-height: 48px;
   line-height: 23px;
+  text-align: end;
   color: rgba(255,255,255,0.3);
   padding: 0;
   align-items: center;
   border: 2px solid #ffffff;
+  word-break: break-all;
 }
 
 /* Range-слайдер. Левая ячейка */
 .catalog-filter-label:first-child {
   border-radius: 4px 0 0 4px;
+  padding-right: 13px;
 }
 
 /* Range-слайдер. Правая ячейка */
 .catalog-filter-label:last-child {
   border-radius: 0 4px 4px 0;
-  margin-left: -2px;
+  margin-left: -1px;
+  padding-right: 14px;
 }
 
 .catalog-filter-label:hover {
@@ -784,9 +800,9 @@ body {
 .range-input {
   width: 72px;
   padding: 0;
-  margin-left: 17px;
-  margin-right: auto;
+  margin-left: 16px;
   margin-top: 4px;
+  margin-right: auto;
   font: inherit;
   color: #ffffff;
   line-height: 23px;
@@ -872,10 +888,12 @@ body {
 
 /* Кнопка фильтра "Применить" */
 .catalog-filter-buttons .button {
+  box-sizing: border-box;
   width: 160px;
-  height: 48px;
+  min-height: 48px;
   margin-bottom: 20px;
   font-size: 16px;
+  padding: 10px;
 }
 
 /* Кнопка фильтра "Применить". Состояния */
@@ -892,7 +910,7 @@ body {
   line-height: 23px;
   text-align: center;
   width: 94px;
-  height: 24px;
+  min-height: 24px;
   margin: 0;
   padding: 0;
   padding-top: 1px;
@@ -933,8 +951,10 @@ body {
   margin: 0;
   margin-right: auto;
   padding: 0;
+  padding-right: 20px;
   color: #000000;
   font-size: 30px;
+  line-height: 39px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -987,9 +1007,12 @@ body {
 /* Контейнер кнопок отображения */
 .button-view-container {
   display: flex;
-  justify-content: space-between;
-  width: 160px;
+  flex-wrap: wrap;
+  justify-content: end;
+  min-width: 160px;
+  max-width: 320px;
   height: 48px;
+  margin-right: -8px;
 }
 
 /* Кнопки отображения */
@@ -1001,6 +1024,8 @@ body {
   border-style: solid;
   border-color: #e5e5e5;
   border-radius: 4px;
+  margin-right: 8px;
+  margin-bottom: 5px;
 }
 
 .button-view:hover {
@@ -1043,7 +1068,7 @@ body {
 /* Карточка гостиницы */
 .hotel-card {
   display: grid;
-  grid-template-rows: 4px 206px auto auto 37px 37px 4px;
+  grid-template-rows: 4px minmax(206px, auto) auto auto minmax(37px, auto) minmax(37px, auto) 4px;
   grid-template-columns: 20px 159px 141px 20px;
   row-gap: 16px;
 }
@@ -1080,6 +1105,10 @@ body {
   text-decoration: none;
 }
 
+.hotel-card-title-link:focus {
+  outline: #000000 2px solid;
+}
+
 /* Назавание гостиницы в карточке */
 .hotel-card-title {
   margin: 0;
@@ -1103,6 +1132,7 @@ body {
   grid-column: 2;
   grid-row: 4;
   align-self: end;
+  padding-right: 15px;
 }
 
 /* Цена гостиницы */
@@ -1128,6 +1158,8 @@ body {
 .button-favourites-done {
   grid-column: 3;
   grid-row: 5;
+  box-sizing: border-box;
+  padding: 7px 5px 4px 5px;
 }
 
 /* Зелёная кнопка в каталоге */
@@ -1152,10 +1184,12 @@ body {
   grid-column: 3;
   grid-row: 6;
   justify-self: end;
-  height: 37px;
+  min-height: 37px;
   width: 160px;
   background-color: #f2f2f2;
   border-radius: 4px;
+  box-sizing: border-box;
+  padding: 8px;
 }
 .rating-text {
   color: inherit;
@@ -1171,10 +1205,9 @@ body {
   position: relative;
   display: flex;
   margin: 0;
-  margin-bottom: 30px;
   padding: 0;
   width: 1056px;
-  height: 120px;
+  min-height: 120px;
   justify-content: center;
   align-items: center;
 }
@@ -1216,21 +1249,24 @@ body {
 .pagination {
   display: flex;
   width: 1056px;
-  height: 55px;
-  align-items: center;
-  margin-bottom: 73px;
+  min-height: 55px;
+  align-items: flex-start;
+  margin-bottom: 67px;
+  padding-top: 30px;
 }
 
 /* Список пагинации */
 .pagination-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  max-width: 646px;
 }
 
 /* Пункт списка пагинации (кроме последнего) */
-.pagination-item:not(:last-child) {
+.pagination-item {
   margin-right: 8px;
 }
 
@@ -1238,11 +1274,13 @@ body {
 .pagination-link {
   display: flex;
   box-sizing: border-box;
-  width: 55px;
-  height: 55px;
+  min-width: 55px;
+  min-height: 55px;
   justify-content: center;
   align-items: center;
-}
+  padding: 8px;
+  margin-bottom: 5px;
+ }
 
 /* Активная кнопка пагинации */
 .pagination-current {
@@ -1252,14 +1290,19 @@ body {
 
 /* Подпись селектора количества карточек */
 .hotels-number-label {
+  margin-top: 15px;
   margin-left: auto;
   margin-right: 51px;
+  padding-left: 10px;
+  padding-bottom: 7px;
 }
 
 /* Селект в разделе пагинации */
 .pagination .select-control {
   width: 160px;
   margin: 0;
+  margin-top: 2px;  
+
 }
 
 /* Секция c подпиской */
@@ -1275,12 +1318,13 @@ body {
 /* Секция с подпиской на главной */
 .newsletter-section {
   width: 1200px;
-  height: 411px;
+  min-height: 411px;
+  padding: 30px;
   color: #ffffff;
   padding-top: 94px;
   background-color: #333333;
   background-image: url("../images/newsletter-background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -1295,7 +1339,7 @@ body {
 /* Секция с подпиской каталога */
 .newsletter-inner {
   width: 1200px;
-  height: 241px;
+  min-height: 241px;
   margin-bottom: 140px;
 }
 
@@ -1322,7 +1366,7 @@ body {
   display: grid;
   padding: 0;
   grid-template-columns: 600px 200px;
-  grid-template-rows: 60px;
+  grid-template-rows: minmax(60px, auto);
 }
 
 /* Текстовое поле формы */
@@ -1350,7 +1394,8 @@ body {
 
 /* Кнопка формы */
 .newsletter-button {
-  border-radius: 0 10px 10px 0;;
+  border-radius: 0 10px 10px 0;
+  padding: 17px;
 }
 
 .page-footer {
@@ -1360,7 +1405,7 @@ body {
   margin: 0 auto;
 }
 
-.page-footer::before {
+.page-footer-index::before {
   position: absolute;
   content: "";
   width: 1200px;
@@ -1376,18 +1421,17 @@ body {
   width: 1076px;
   margin: 0 auto;
   padding-top: 26px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 /* Социальные сети (футер) */
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content:space-between;
-  width: 128px;
+  width: 150px;
   margin: 0;
   margin-left: 0px;
-  margin-right: 228px;
+  margin-right: 205px;
   padding: 0;
   list-style-type: none;
 }
@@ -1396,6 +1440,7 @@ body {
 .footer-social-item {
   display: flex;
   margin: 0;
+  margin-right: 4px;
   padding: 0;
   align-items: center;
 }
@@ -1406,20 +1451,17 @@ body {
   box-sizing: border-box;
   display: block;
   margin: 0;
+  margin-bottom: 8px;
+  margin-left: -2px;
   padding: 0;
   height: 40px;
-  min-width: 40px;
+  min-width: 42px;
   border-radius: 10px;
 }
 
-.social-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  fill: #83B3D3;
+.social-link:focus {
+  outline: none;
+  border: 3px solid #83B3D3;
 }
 
 .social-link:hover .social-icon {
@@ -1434,17 +1476,22 @@ body {
   fill: #68A2CA;
 }
 
-.social-link:focus {
-  border: 3px solid #83B3D3;
+.social-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  fill: #83B3D3;
 }
 
 /* Контактный телефон (футер) */
 .footer-contacts-phone {
   box-sizing: border-box;
   width: 365px;
-  height: 64px;
+  min-=height: 64px;
   margin: 0;
-  margin-right: 53px;
   padding: 14px 15px 18px 15px;
   color: #000000;
   font-size: 40px;
@@ -1493,7 +1540,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom: 8px;
   left: 0;
   margin: auto;
   fill: #000000;
@@ -1521,9 +1568,10 @@ body {
   box-sizing: border-box;
   font-size: "PT Sans", sans-serif;
   width: 715px;
-  height: 561px;
+  max-height: 561px;
   padding: 70px;
-  padding-top: 62px;
+  padding-left: 68px;
+  padding-top: 60px;
   background-color: #ffffff;
   border-radius: 30px;
   box-shadow: 0 25px 50px rgba(0,0,0,0.15);
@@ -1574,7 +1622,7 @@ body {
 /* Модальное окно. Заголовок */
 .modal-title {
   margin: 0;
-  margin-bottom: 59px;
+  margin-bottom: 60px;
   font-family: "PT Sans", sans-serif;
   font-size: 30px;
   line-height: 40px;
@@ -1588,6 +1636,7 @@ body {
 /* Форма. Обёртка поля */
 .guest-form .field-group {
   margin: 0;
+  margin-left: 2px;
   margin-bottom: 40px;
 }
 
@@ -1646,13 +1695,14 @@ body {
 .validation {
   position: absolute;
   left: 155px;
-  top: 45px;
+  top: 44px;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 40px;
   font-weight: 400;
 }
 
+.guest-form-date-field:invalid + .invalid-text::after,
 .guest-form-date-field + .invalid-text::after {
   height: 40px;
   width: 420px;
@@ -1660,6 +1710,7 @@ body {
   color: rgba(255, 87, 87, 1);
 }
 
+.guest-form-date-field:valid + .valid-text::after,
 .guest-form-date-field + .valid-text::after {
   height: 40px;
   width: 420px;
@@ -1692,7 +1743,7 @@ body {
 
 /* Обёртка поля с количеством. Дети */
 .field-number-container .field-group:last-child {
-  width: 230px;
+  width: 232px;
 }
 
 /* Поле ввода. Количество */
@@ -1705,12 +1756,12 @@ body {
 /* Подпись к полю ввода. Дети */
 .field-group:last-child .guest-form-number {
   position: relative;
-  width: 99px;
+  width: 90px;
 }
 
 .form-label-icon {
   position: relative;
-  wrap: wrap;
+  flex-wrap: wrap;
 }
 
 /* Иконка с информацией */
@@ -1833,4 +1884,5 @@ body {
   height: 60px;
   width: 575px;
   border-radius: 10px;
+  margin-left: 2px;
 }

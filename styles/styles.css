@@ -711,7 +711,7 @@ img {
   opacity: 0.3;
 }
 
-.control:focus .control-mark {
+.control-input:focus ~ .control-mark {
   opacity: 0.6;
   outline: #83b3d3 3px solid;
 }
@@ -744,9 +744,8 @@ img {
   opacity: 1;
 }
 
-.control-input:focus .control-mark {
+.control-input:focus ~ .control-mark-radio {
   opacity: 1;
-  outline: #83b3d3 3px solid;
 }
 
 /* Range-слайдер. Блок */
@@ -1702,7 +1701,7 @@ img {
 
 .guest-form-date-field:active {
   background-color: #ffffff;
-  border: 2px solid #000000;
+  outline: #000000 2px solid;
 }
 
 .guest-form-date-field:focus {
@@ -1769,6 +1768,8 @@ img {
   width: 133px;
   padding: 0;
   text-align: center;
+  -webkit-appearance: textfield;
+          appearance: textfield;
 }
 
 /* Подпись к полю ввода. Дети */
